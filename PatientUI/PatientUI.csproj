@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CCC81F5-3DB8-4EF7-8CA4-F6C96740406C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PatientUI</RootNamespace>
+    <AssemblyName>PatientUI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmAddEditReminder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEditReminder.Designer.cs">
+      <DependentUpon>FrmAddEditReminder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBloodSugarManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBloodSugarManage.Designer.cs">
+      <DependentUpon>FrmBloodSugarManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDietRecommend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDietRecommend.Designer.cs">
+      <DependentUpon>FrmDietRecommend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmExerciseManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExerciseManage.Designer.cs">
+      <DependentUpon>FrmExerciseManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFoodDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFoodDetail.Designer.cs">
+      <DependentUpon>FrmFoodDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMedicineManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMedicineManage.Designer.cs">
+      <DependentUpon>FrmMedicineManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMedicineReminder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMedicineReminder.Designer.cs">
+      <DependentUpon>FrmMedicineReminder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPatientForgotPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPatientForgotPwd.Designer.cs">
+      <DependentUpon>FrmPatientForgotPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPatientHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPatientHome.Designer.cs">
+      <DependentUpon>FrmPatientHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPatientLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPatientLogin.Designer.cs">
+      <DependentUpon>FrmPatientLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPatientMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPatientMain.Designer.cs">
+      <DependentUpon>FrmPatientMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPatientChangePwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPatientMyInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPatientMyInfo.Designer.cs">
+      <DependentUpon>FrmPatientMyInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPatientRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPatientRegister.Designer.cs">
+      <DependentUpon>FrmPatientRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelectBloodSugar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelectBloodSugar.Designer.cs">
+      <DependentUpon>FrmSelectBloodSugar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmDietRecommend.resx">
+      <DependentUpon>FrmDietRecommend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExerciseManage.resx">
+      <DependentUpon>FrmExerciseManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPatientForgotPwd.resx">
+      <DependentUpon>FrmPatientForgotPwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPatientHome.resx">
+      <DependentUpon>FrmPatientHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPatientLogin.resx">
+      <DependentUpon>FrmPatientLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPatientMain.resx">
+      <DependentUpon>FrmPatientMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPatientMyInfo.resx">
+      <DependentUpon>FrmPatientMyInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPatientRegister.resx">
+      <DependentUpon>FrmPatientRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Diabetes_BLL\BLL.csproj">
+      <Project>{ddccb142-2f03-4857-8496-c4f4cb26e3bc}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Diabetes_Model\Model.csproj">
+      <Project>{b76739f0-02c3-4d14-a6ca-ca8186e70561}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Diabetes_Tools\Tools.csproj">
+      <Project>{f16b0bf5-a408-4a97-bd69-0467e3353f43}</Project>
+      <Name>Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

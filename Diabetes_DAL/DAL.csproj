@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11E2EA8A-0D79-4AFE-A78C-1D5BA04B4EC2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Diabetes_DAL</RootNamespace>
+    <AssemblyName>Diabetes_DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D_ Doctor.cs" />
+    <Compile Include="D_Abnormal.cs" />
+    <Compile Include="D_Admin.cs" />
+    <Compile Include="D_BloodSugar.cs" />
+    <Compile Include="D_DictLibrary.cs" />
+    <Compile Include="D_Diet.cs" />
+    <Compile Include="D_DietPlan.cs" />
+    <Compile Include="D_DrugLibrary.cs" />
+    <Compile Include="D_EffectEvaluation.cs" />
+    <Compile Include="D_Exercise.cs" />
+    <Compile Include="D_ExerciseLibrary.cs" />
+    <Compile Include="D_FollowUp.cs" />
+    <Compile Include="D_FoodAudit.cs" />
+    <Compile Include="D_FoodNutrition.cs" />
+    <Compile Include="D_FoodVersion.cs" />
+    <Compile Include="D_HealthAssessment.cs" />
+    <Compile Include="D_HomeStatistics.cs" />
+    <Compile Include="D_InterventionPlan.cs" />
+    <Compile Include="D_Medicine.cs" />
+    <Compile Include="D_MedicineReminder.cs" />
+    <Compile Include="D_Patient.cs" />
+    <Compile Include="D_PatientHealthOverview.cs" />
+    <Compile Include="D_PatientRecord.cs" />
+    <Compile Include="D_Permission.cs" />
+    <Compile Include="D_Role.cs" />
+    <Compile Include="D_RolePermission.cs" />
+    <Compile Include="D_User.cs" />
+    <Compile Include="D_UserHealth.cs" />
+    <Compile Include="D_UserRole.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Diabetes_Model\Model.csproj">
+      <Project>{b76739f0-02c3-4d14-a6ca-ca8186e70561}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Diabetes_Tools\Tools.csproj">
+      <Project>{f16b0bf5-a408-4a97-bd69-0467e3353f43}</Project>
+      <Name>Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

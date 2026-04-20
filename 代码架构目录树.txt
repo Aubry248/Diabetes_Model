@@ -1,0 +1,1670 @@
+卷 D盘 的文件夹 PATH 列表
+卷序列号为 B470-47BE
+D:.
+|   Architecture.puml
+|   Diabetes_Model.sln
+|   代码架构目录树.txt
+|   
++---AdminUI
+|   |   AdminUI.csproj
+|   |   App.config
+|   |   FrmAccessLog.cs
+|   |   FrmAccessLog.Designer.cs
+|   |   FrmAdminLogin.cs
+|   |   FrmAdminLogin.Designer.cs
+|   |   FrmAdminLogin.resx
+|   |   FrmAdminMain.cs
+|   |   FrmAdminMain.Designer.cs
+|   |   FrmAdminMain.resx
+|   |   FrmBackupRestore.cs
+|   |   FrmBackupRestore.Designer.cs
+|   |   FrmChangePwd.cs
+|   |   FrmChangePwd.Designer.cs
+|   |   FrmDictionaryManager.cs
+|   |   FrmDrugLibraryManager.cs
+|   |   FrmDrugLibraryManager.Designer.cs
+|   |   FrmExerciseLibraryManager.cs
+|   |   FrmExerciseLibraryManager.Designer.cs
+|   |   FrmFoodLibraryManager.cs
+|   |   FrmLogDetail.cs
+|   |   FrmLogDetail.Designer.cs
+|   |   FrmMyInfo.cs
+|   |   FrmMyInfo.Designer.cs
+|   |   FrmRoleEdit.cs
+|   |   FrmRoleEdit.Designer.cs
+|   |   FrmRoleEdit.resx
+|   |   FrmRolePermissionManage.cs
+|   |   FrmRolePermissionManage.Designer.cs
+|   |   FrmRolePermissionManage.resx
+|   |   FrmSystemConfig.cs
+|   |   FrmSystemConfig.Designer.cs
+|   |   FrmUserEdit.cs
+|   |   FrmUserEdit.Designer.cs
+|   |   FrmUserInfoManage.cs
+|   |   FrmUserInfoManage.Designer.cs
+|   |   FrmUserInfoManage.resx
+|   |   GlobalHelper.cs
+|   |   packages.config
+|   |   Program.cs
+|   |   SystemGlobalConfig.cs
+|   |   
+|   +---bin
+|   |   +---Debug
+|   |   |   |   AdminUI.exe
+|   |   |   |   AdminUI.exe.config
+|   |   |   |   AdminUI.pdb
+|   |   |   |   BouncyCastle.Cryptography.dll
+|   |   |   |   BouncyCastle.Cryptography.xml
+|   |   |   |   Diabetes_BLL.dll
+|   |   |   |   Diabetes_BLL.pdb
+|   |   |   |   Diabetes_DAL.dll
+|   |   |   |   Diabetes_DAL.pdb
+|   |   |   |   Diabetes_Model.dll
+|   |   |   |   Diabetes_Model.pdb
+|   |   |   |   Diabetes_Tools.dll
+|   |   |   |   Diabetes_Tools.pdb
+|   |   |   |   Enums.NET.dll
+|   |   |   |   Enums.NET.pdb
+|   |   |   |   Enums.NET.xml
+|   |   |   |   EPPlus.dll
+|   |   |   |   EPPlus.Interfaces.dll
+|   |   |   |   EPPlus.xml
+|   |   |   |   ExtendedNumerics.BigDecimal.dll
+|   |   |   |   ExtendedNumerics.BigDecimal.xml
+|   |   |   |   ICSharpCode.SharpZipLib.dll
+|   |   |   |   ICSharpCode.SharpZipLib.pdb
+|   |   |   |   ICSharpCode.SharpZipLib.xml
+|   |   |   |   MathNet.Numerics.dll
+|   |   |   |   MathNet.Numerics.xml
+|   |   |   |   Microsoft.IO.RecyclableMemoryStream.dll
+|   |   |   |   Microsoft.IO.RecyclableMemoryStream.xml
+|   |   |   |   Newtonsoft.Json.dll
+|   |   |   |   Newtonsoft.Json.xml
+|   |   |   |   NPOI.Core.dll
+|   |   |   |   NPOI.Core.pdb
+|   |   |   |   NPOI.Core.xml
+|   |   |   |   NPOI.OOXML.dll
+|   |   |   |   NPOI.OOXML.pdb
+|   |   |   |   NPOI.OOXML.xml
+|   |   |   |   NPOI.OpenXml4Net.dll
+|   |   |   |   NPOI.OpenXml4Net.pdb
+|   |   |   |   NPOI.OpenXml4Net.xml
+|   |   |   |   NPOI.OpenXmlFormats.dll
+|   |   |   |   NPOI.OpenXmlFormats.pdb
+|   |   |   |   NPOI.OpenXmlFormats.xml
+|   |   |   |   NSax.dll
+|   |   |   |   SixLabors.Fonts.dll
+|   |   |   |   SixLabors.Fonts.xml
+|   |   |   |   SixLabors.ImageSharp.dll
+|   |   |   |   SixLabors.ImageSharp.xml
+|   |   |   |   System.Buffers.dll
+|   |   |   |   System.Buffers.xml
+|   |   |   |   System.Memory.dll
+|   |   |   |   System.Memory.xml
+|   |   |   |   System.Numerics.Vectors.dll
+|   |   |   |   System.Numerics.Vectors.xml
+|   |   |   |   System.Runtime.CompilerServices.Unsafe.dll
+|   |   |   |   System.Runtime.CompilerServices.Unsafe.xml
+|   |   |   |   System.Security.Cryptography.Xml.dll
+|   |   |   |   System.Security.Cryptography.Xml.xml
+|   |   |   |   System.Text.Encoding.CodePages.dll
+|   |   |   |   System.Text.Encoding.CodePages.xml
+|   |   |   |   System.Threading.Tasks.Extensions.dll
+|   |   |   |   System.Threading.Tasks.Extensions.xml
+|   |   |   |   ZString.dll
+|   |   |   |   ZString.xml
+|   |   |   |   
+|   |   |   \---Backup
+|   |   \---Release
+|   +---Microsoft
+|   |   \---VisualBasic
+|   |           Interaction.cs
+|   |           
+|   +---obj
+|   |   +---Debug
+|   |   |   |   .NETFramework,Version=v4.8.AssemblyAttributes.cs
+|   |   |   |   Admin.csproj.AssemblyReference.cache
+|   |   |   |   AdminUI.csproj.AssemblyReference.cache
+|   |   |   |   AdminUI.csproj.CoreCompileInputs.cache
+|   |   |   |   AdminUI.csproj.FileListAbsolute.txt
+|   |   |   |   AdminUI.csproj.GenerateResource.cache
+|   |   |   |   AdminUI.csproj.Up2Date
+|   |   |   |   AdminUI.exe
+|   |   |   |   AdminUI.FrmAdminLogin.resources
+|   |   |   |   AdminUI.FrmAdminMain.resources
+|   |   |   |   AdminUI.FrmRoleEdit.resources
+|   |   |   |   AdminUI.FrmRolePermissionManage.resources
+|   |   |   |   AdminUI.FrmUserInfoManage.resources
+|   |   |   |   AdminUI.pdb
+|   |   |   |   AdminUI.Properties.Resources.resources
+|   |   |   |   DesignTimeResolveAssemblyReferences.cache
+|   |   |   |   DesignTimeResolveAssemblyReferencesInput.cache
+|   |   |   |   
+|   |   |   \---TempPE
+|   |   \---Release
+|   |           .NETFramework,Version=v4.8.AssemblyAttributes.cs
+|   |           AdminUI.csproj.AssemblyReference.cache
+|   |           
+|   \---Properties
+|           AssemblyInfo.cs
+|           Resources.Designer.cs
+|           Resources.resx
+|           Settings.Designer.cs
+|           Settings.settings
+|           
++---Diabetes_BLL
+|   |   BLL.csproj
+|   |   B_Abnormal.cs
+|   |   B_AccessLog.cs
+|   |   B_AuditLog.cs
+|   |   B_BackupRestore.cs
+|   |   B_BloodSugar.cs
+|   |   B_DictLibrary.cs
+|   |   B_Diet.cs
+|   |   B_DietPlan.cs
+|   |   B_DietRecommend.cs
+|   |   B_DrugLibrary.cs
+|   |   B_EffectEvaluation.cs
+|   |   B_Exercise.cs
+|   |   B_ExerciseLibrary.cs
+|   |   B_FollowUp.cs
+|   |   B_FoodAudit.cs
+|   |   B_FoodNutrition.cs
+|   |   B_FoodVersion.cs
+|   |   B_HealthAssessment.cs
+|   |   B_HomeStatistics.cs
+|   |   B_InterventionPlan.cs
+|   |   B_MedicationAdjust.cs
+|   |   B_Medicine.cs
+|   |   B_MedicineReminder.cs
+|   |   B_PatientHealthOverview.cs
+|   |   B_PatientRecord.cs
+|   |   B_Permission.cs
+|   |   B_Role.cs
+|   |   B_RolePermission.cs
+|   |   B_SystemConfig.cs
+|   |   B_User.cs
+|   |   B_UserHealth.cs
+|   |   B_UserPwd.cs
+|   |   packages.config
+|   |   SystemGlobalConfig.cs
+|   |   
+|   +---bin
+|   |   +---Debug
+|   |   |       Diabetes_BLL.dll
+|   |   |       Diabetes_BLL.pdb
+|   |   |       Diabetes_DAL.dll
+|   |   |       Diabetes_DAL.pdb
+|   |   |       Diabetes_Model.dll
+|   |   |       Diabetes_Model.pdb
+|   |   |       Diabetes_Tools.dll
+|   |   |       Diabetes_Tools.pdb
+|   |   |       EPPlus.dll
+|   |   |       EPPlus.Interfaces.dll
+|   |   |       EPPlus.xml
+|   |   |       Microsoft.IO.RecyclableMemoryStream.dll
+|   |   |       Microsoft.IO.RecyclableMemoryStream.xml
+|   |   |       Newtonsoft.Json.dll
+|   |   |       Newtonsoft.Json.xml
+|   |   |       System.Buffers.dll
+|   |   |       System.Buffers.xml
+|   |   |       System.ComponentModel.Annotations.dll
+|   |   |       System.Memory.dll
+|   |   |       System.Memory.xml
+|   |   |       System.Numerics.Vectors.dll
+|   |   |       System.Numerics.Vectors.xml
+|   |   |       System.Runtime.CompilerServices.Unsafe.dll
+|   |   |       System.Runtime.CompilerServices.Unsafe.xml
+|   |   |       System.Security.Cryptography.Xml.dll
+|   |   |       System.Security.Cryptography.Xml.xml
+|   |   |       
+|   |   \---Release
+|   +---obj
+|   |   +---Debug
+|   |   |   |   .NETFramework,Version=v4.8.AssemblyAttributes.cs
+|   |   |   |   BLL.csproj.AssemblyReference.cache
+|   |   |   |   BLL.csproj.CoreCompileInputs.cache
+|   |   |   |   BLL.csproj.FileListAbsolute.txt
+|   |   |   |   BLL.csproj.Up2Date
+|   |   |   |   DesignTimeResolveAssemblyReferencesInput.cache
+|   |   |   |   Diabetes_BLL.csproj.AssemblyReference.cache
+|   |   |   |   Diabetes_BLL.dll
+|   |   |   |   Diabetes_BLL.pdb
+|   |   |   |   
+|   |   |   \---TempPE
+|   |   \---Release
+|   |           .NETFramework,Version=v4.8.AssemblyAttributes.cs
+|   |           BLL.csproj.AssemblyReference.cache
+|   |           
+|   \---Properties
+|           AssemblyInfo.cs
+|           
++---Diabetes_DAL
+|   |   DAL.csproj
+|   |   D_Abnormal.cs
+|   |   D_BloodSugar.cs
+|   |   D_DictLibrary.cs
+|   |   D_Diet.cs
+|   |   D_DietPlan.cs
+|   |   D_DrugLibrary.cs
+|   |   D_EffectEvaluation.cs
+|   |   D_Exercise.cs
+|   |   D_ExerciseLibrary.cs
+|   |   D_FollowUp.cs
+|   |   D_FoodAudit.cs
+|   |   D_FoodNutrition.cs
+|   |   D_FoodVersion.cs
+|   |   D_HealthAssessment.cs
+|   |   D_HomeStatistics.cs
+|   |   D_InterventionPlan.cs
+|   |   D_MedicationAdjust.cs
+|   |   D_Medicine.cs
+|   |   D_MedicineReminder.cs
+|   |   D_PatientHealthOverview.cs
+|   |   D_PatientRecord.cs
+|   |   D_Permission.cs
+|   |   D_Role.cs
+|   |   D_RolePermission.cs
+|   |   D_User.cs
+|   |   D_UserHealth.cs
+|   |   D_UserRole.cs
+|   |   
+|   +---bin
+|   |   +---Debug
+|   |   |       Diabetes_DAL.dll
+|   |   |       Diabetes_DAL.pdb
+|   |   |       Diabetes_Model.dll
+|   |   |       Diabetes_Model.pdb
+|   |   |       Diabetes_Tools.dll
+|   |   |       Diabetes_Tools.pdb
+|   |   |       
+|   |   \---Release
+|   +---obj
+|   |   +---Debug
+|   |   |   |   .NETFramework,Version=v4.8.AssemblyAttributes.cs
+|   |   |   |   DAL.csproj.AssemblyReference.cache
+|   |   |   |   DAL.csproj.CoreCompileInputs.cache
+|   |   |   |   DAL.csproj.FileListAbsolute.txt
+|   |   |   |   DAL.csproj.Up2Date
+|   |   |   |   DesignTimeResolveAssemblyReferences.cache
+|   |   |   |   DesignTimeResolveAssemblyReferencesInput.cache
+|   |   |   |   Diabetes_DAL.csproj.AssemblyReference.cache
+|   |   |   |   Diabetes_DAL.dll
+|   |   |   |   Diabetes_DAL.pdb
+|   |   |   |   
+|   |   |   \---TempPE
+|   |   \---Release
+|   |           .NETFramework,Version=v4.8.AssemblyAttributes.cs
+|   |           DAL.csproj.AssemblyReference.cache
+|   |           
+|   \---Properties
+|           AssemblyInfo.cs
+|           
++---Diabetes_Model
+|   |   Abnormal.cs
+|   |   AbnormalWarnViewModel.cs
+|   |   AccessLog.cs
+|   |   AntidiabeticDrug.cs
+|   |   AuditLog.cs
+|   |   BackupLog.cs
+|   |   BizResult.cs
+|   |   BloodSugar.cs
+|   |   BloodSugarStatisticsModel.cs
+|   |   BloodSugarTrendViewModel.cs
+|   |   ComplicationProgressViewModel.cs
+|   |   ComplicationRiskModel.cs
+|   |   DiabetesRiskModel.cs
+|   |   Dict.cs
+|   |   DictType.cs
+|   |   Diet.cs
+|   |   Diet7DayStatistic.cs
+|   |   DietMealPlan.cs
+|   |   DrugAuditLog.cs
+|   |   DrugVersionHistory.cs
+|   |   EffectEvaluationReportModel.cs
+|   |   Exercise.cs
+|   |   ExerciseEnergyExpenditure.cs
+|   |   FollowUp.cs
+|   |   FollowUpHistoryViewModel.cs
+|   |   FoodAudit.cs
+|   |   FoodNutrition.cs
+|   |   FoodVersion.cs
+|   |   HealthAssessment.cs
+|   |   HealthDataModel.cs
+|   |   HomeStatisticViewModel.cs
+|   |   InterventionEffectScore.cs
+|   |   InterventionPlan.cs
+|   |   MedicationPlan.cs
+|   |   Medicine.cs
+|   |   MedicineReminder.cs
+|   |   MedicineTrend.cs
+|   |   Model.csproj
+|   |   NeuropathyDrug.cs
+|   |   PatientArchive.cs
+|   |   PatientHealthOverview.cs
+|   |   PatientSelectInfo.cs
+|   |   PatientSimpleInfo.cs
+|   |   Permission.cs
+|   |   ResultModel.cs
+|   |   ReviewRemindViewModel.cs
+|   |   Role.cs
+|   |   RolePermission.cs
+|   |   UserHealthInfo.cs
+|   |   UserRole.cs
+|   |   Users.cs
+|   |   
+|   +---bin
+|   |   +---Debug
+|   |   |       Diabetes_Model.dll
+|   |   |       Diabetes_Model.pdb
+|   |   |       
+|   |   \---Release
+|   +---obj
+|   |   +---Debug
+|   |   |   |   .NETFramework,Version=v4.8.AssemblyAttributes.cs
+|   |   |   |   DesignTimeResolveAssemblyReferences.cache
+|   |   |   |   DesignTimeResolveAssemblyReferencesInput.cache
+|   |   |   |   Diabetes_Model.csproj.AssemblyReference.cache
+|   |   |   |   Diabetes_Model.dll
+|   |   |   |   Diabetes_Model.pdb
+|   |   |   |   Model.csproj.AssemblyReference.cache
+|   |   |   |   Model.csproj.CoreCompileInputs.cache
+|   |   |   |   Model.csproj.FileListAbsolute.txt
+|   |   |   |   
+|   |   |   \---TempPE
+|   |   \---Release
+|   |           .NETFramework,Version=v4.8.AssemblyAttributes.cs
+|   |           Model.csproj.AssemblyReference.cache
+|   |           
+|   \---Properties
+|           AssemblyInfo.cs
+|           
++---Diabetes_Tools
+|   |   LoginUser.cs
+|   |   MD5Helper.cs
+|   |   PasswordHelper.cs
+|   |   Result.cs
+|   |   SqlHelper.cs
+|   |   Tools.csproj
+|   |   
+|   +---bin
+|   |   +---Debug
+|   |   |       Diabetes_Tools.dll
+|   |   |       Diabetes_Tools.pdb
+|   |   |       
+|   |   \---Release
+|   +---obj
+|   |   +---Debug
+|   |   |   |   .NETFramework,Version=v4.8.AssemblyAttributes.cs
+|   |   |   |   DesignTimeResolveAssemblyReferencesInput.cache
+|   |   |   |   Diabetes_Tools.csproj.AssemblyReference.cache
+|   |   |   |   Diabetes_Tools.dll
+|   |   |   |   Diabetes_Tools.pdb
+|   |   |   |   Tools.csproj.AssemblyReference.cache
+|   |   |   |   Tools.csproj.CoreCompileInputs.cache
+|   |   |   |   Tools.csproj.FileListAbsolute.txt
+|   |   |   |   
+|   |   |   \---TempPE
+|   |   \---Release
+|   |           .NETFramework,Version=v4.8.AssemblyAttributes.cs
+|   |           Tools.csproj.AssemblyReference.cache
+|   |           
+|   \---Properties
+|           AssemblyInfo.cs
+|           
++---DoctorUI
+|   |   App.config
+|   |   DoctorUI.csproj
+|   |   FrmAbnormalData.cs
+|   |   FrmAbnormalData.Designer.cs
+|   |   FrmAbPatientSelector.cs
+|   |   FrmAbPatientSelector.Designer.cs
+|   |   FrmDoctorForgetPwd.cs
+|   |   FrmDoctorHome.cs
+|   |   FrmDoctorHome.Designer.cs
+|   |   FrmDoctorLogin.cs
+|   |   FrmDoctorLogin.Designer.cs
+|   |   FrmDoctorLogin.resx
+|   |   FrmDoctorMain.cs
+|   |   FrmDoctorMain.Designer.cs
+|   |   FrmDoctorMain.resx
+|   |   FrmDoctorMyProfile.cs
+|   |   FrmDoctorMyProfile.Designer.cs
+|   |   FrmEffectEvaluation.cs
+|   |   FrmEffectEvaluation.Designer.cs
+|   |   FrmFollowUpManage.cs
+|   |   FrmFollowUpManage.Designer.cs
+|   |   FrmHealthAssessment.cs
+|   |   FrmHealthAssessment.Designer.cs
+|   |   FrmHealthAssessment.resx
+|   |   FrmInterventionPlan.cs
+|   |   FrmInterventionPlan.Designer.cs
+|   |   FrmMedicationAdjustment.cs
+|   |   FrmMedicationAdjustment.Designer.cs
+|   |   FrmPatientRecordManage.cs
+|   |   FrmPatientRecordManage.Designer.cs
+|   |   GlobalConfig.cs
+|   |   PatientBindInfo.cs
+|   |   Program.cs
+|   |   
+|   +---bin
+|   |   +---Debug
+|   |   |       Diabetes_BLL.dll
+|   |   |       Diabetes_BLL.pdb
+|   |   |       Diabetes_DAL.dll
+|   |   |       Diabetes_DAL.pdb
+|   |   |       Diabetes_Model.dll
+|   |   |       Diabetes_Model.pdb
+|   |   |       Diabetes_Tools.dll
+|   |   |       Diabetes_Tools.pdb
+|   |   |       DoctorUI.exe
+|   |   |       DoctorUI.exe.config
+|   |   |       DoctorUI.pdb
+|   |   |       EPPlus.dll
+|   |   |       EPPlus.Interfaces.dll
+|   |   |       EPPlus.xml
+|   |   |       Microsoft.IO.RecyclableMemoryStream.dll
+|   |   |       Microsoft.IO.RecyclableMemoryStream.xml
+|   |   |       Newtonsoft.Json.dll
+|   |   |       Newtonsoft.Json.xml
+|   |   |       System.Buffers.dll
+|   |   |       System.Buffers.xml
+|   |   |       System.Memory.dll
+|   |   |       System.Memory.xml
+|   |   |       System.Numerics.Vectors.dll
+|   |   |       System.Numerics.Vectors.xml
+|   |   |       System.Runtime.CompilerServices.Unsafe.dll
+|   |   |       System.Runtime.CompilerServices.Unsafe.xml
+|   |   |       
+|   |   \---Release
+|   +---obj
+|   |   +---Debug
+|   |   |   |   .NETFramework,Version=v4.8.AssemblyAttributes.cs
+|   |   |   |   DesignTimeResolveAssemblyReferences.cache
+|   |   |   |   DesignTimeResolveAssemblyReferencesInput.cache
+|   |   |   |   Doctor.csproj.AssemblyReference.cache
+|   |   |   |   DoctorUI.csproj.AssemblyReference.cache
+|   |   |   |   DoctorUI.csproj.CoreCompileInputs.cache
+|   |   |   |   DoctorUI.csproj.FileListAbsolute.txt
+|   |   |   |   DoctorUI.csproj.GenerateResource.cache
+|   |   |   |   DoctorUI.csproj.Up2Date
+|   |   |   |   DoctorUI.exe
+|   |   |   |   DoctorUI.FrmDoctorLogin.resources
+|   |   |   |   DoctorUI.FrmDoctorMain.resources
+|   |   |   |   DoctorUI.FrmHealthAssessment.resources
+|   |   |   |   DoctorUI.pdb
+|   |   |   |   DoctorUI.Properties.Resources.resources
+|   |   |   |   
+|   |   |   \---TempPE
+|   |   \---Release
+|   |           .NETFramework,Version=v4.8.AssemblyAttributes.cs
+|   |           DoctorUI.csproj.AssemblyReference.cache
+|   |           
+|   \---Properties
+|           AssemblyInfo.cs
+|           Resources.Designer.cs
+|           Resources.resx
+|           Settings.Designer.cs
+|           Settings.settings
+|           
++---packages
+|   +---BouncyCastle.Cryptography.2.6.2
+|   |   |   .signature.p7s
+|   |   |   BouncyCastle.Cryptography.2.6.2.nupkg
+|   |   |   LICENSE.md
+|   |   |   packageIcon.png
+|   |   |   README.md
+|   |   |   
+|   |   \---lib
+|   |       +---net461
+|   |       |       BouncyCastle.Cryptography.dll
+|   |       |       BouncyCastle.Cryptography.xml
+|   |       |       
+|   |       +---net6.0
+|   |       |       BouncyCastle.Cryptography.dll
+|   |       |       BouncyCastle.Cryptography.xml
+|   |       |       
+|   |       \---netstandard2.0
+|   |               BouncyCastle.Cryptography.dll
+|   |               BouncyCastle.Cryptography.xml
+|   |               
+|   +---Enums.NET.5.0.0
+|   |   |   .signature.p7s
+|   |   |   Enums.NET.5.0.0.nupkg
+|   |   |   
+|   |   \---lib
+|   |       +---net461
+|   |       |       Enums.NET.dll
+|   |       |       Enums.NET.pdb
+|   |       |       Enums.NET.xml
+|   |       |       
+|   |       +---net7.0
+|   |       |       Enums.NET.dll
+|   |       |       Enums.NET.pdb
+|   |       |       Enums.NET.xml
+|   |       |       
+|   |       +---netcoreapp3.0
+|   |       |       Enums.NET.dll
+|   |       |       Enums.NET.pdb
+|   |       |       Enums.NET.xml
+|   |       |       
+|   |       +---netstandard2.0
+|   |       |       Enums.NET.dll
+|   |       |       Enums.NET.pdb
+|   |       |       Enums.NET.xml
+|   |       |       
+|   |       \---netstandard2.1
+|   |               Enums.NET.dll
+|   |               Enums.NET.pdb
+|   |               Enums.NET.xml
+|   |               
+|   +---EPPlus.8.5.1
+|   |   |   .signature.p7s
+|   |   |   EPPlus.8.5.1.nupkg
+|   |   |   EPPlusLogo.png
+|   |   |   license.md
+|   |   |   readme.md
+|   |   |   readme.txt
+|   |   |   
+|   |   \---lib
+|   |       +---net10.0
+|   |       |       EPPlus.dll
+|   |       |       EPPlus.xml
+|   |       |       
+|   |       +---net35
+|   |       |       EPPlus.dll
+|   |       |       EPPlus.xml
+|   |       |       
+|   |       +---net462
+|   |       |       EPPlus.dll
+|   |       |       EPPlus.xml
+|   |       |       
+|   |       +---net8.0
+|   |       |       EPPlus.dll
+|   |       |       EPPlus.xml
+|   |       |       
+|   |       +---net9.0
+|   |       |       EPPlus.dll
+|   |       |       EPPlus.xml
+|   |       |       
+|   |       +---netstandard2.0
+|   |       |       EPPlus.dll
+|   |       |       EPPlus.xml
+|   |       |       
+|   |       \---netstandard2.1
+|   |               EPPlus.dll
+|   |               EPPlus.xml
+|   |               
+|   +---EPPlus.Interfaces.8.4.0
+|   |   |   .signature.p7s
+|   |   |   EPPlus.Interfaces.8.4.0.nupkg
+|   |   |   EPPlusLogo.png
+|   |   |   license.md
+|   |   |   readme.md
+|   |   |   
+|   |   \---lib
+|   |       +---net10.0
+|   |       |       EPPlus.Interfaces.dll
+|   |       |       
+|   |       +---net35
+|   |       |       EPPlus.Interfaces.dll
+|   |       |       
+|   |       +---net462
+|   |       |       EPPlus.Interfaces.dll
+|   |       |       
+|   |       +---net8.0
+|   |       |       EPPlus.Interfaces.dll
+|   |       |       
+|   |       +---net9.0
+|   |       |       EPPlus.Interfaces.dll
+|   |       |       
+|   |       +---netstandard2.0
+|   |       |       EPPlus.Interfaces.dll
+|   |       |       
+|   |       \---netstandard2.1
+|   |               EPPlus.Interfaces.dll
+|   |               
+|   +---ExtendedNumerics.BigDecimal.2025.1001.2.129
+|   |   |   .signature.p7s
+|   |   |   ExtendedNumerics.BigDecimal.2025.1001.2.129.nupkg
+|   |   |   README.md
+|   |   |   
+|   |   \---lib
+|   |       +---net45
+|   |       |       ExtendedNumerics.BigDecimal.dll
+|   |       |       ExtendedNumerics.BigDecimal.xml
+|   |       |       
+|   |       +---net46
+|   |       |       ExtendedNumerics.BigDecimal.dll
+|   |       |       ExtendedNumerics.BigDecimal.xml
+|   |       |       
+|   |       +---net472
+|   |       |       ExtendedNumerics.BigDecimal.dll
+|   |       |       ExtendedNumerics.BigDecimal.xml
+|   |       |       
+|   |       +---net48
+|   |       |       ExtendedNumerics.BigDecimal.dll
+|   |       |       ExtendedNumerics.BigDecimal.xml
+|   |       |       
+|   |       +---net5.0
+|   |       |       ExtendedNumerics.BigDecimal.dll
+|   |       |       ExtendedNumerics.BigDecimal.xml
+|   |       |       
+|   |       +---net6.0
+|   |       |       ExtendedNumerics.BigDecimal.dll
+|   |       |       ExtendedNumerics.BigDecimal.xml
+|   |       |       
+|   |       +---net7.0
+|   |       |       ExtendedNumerics.BigDecimal.dll
+|   |       |       ExtendedNumerics.BigDecimal.xml
+|   |       |       
+|   |       +---net8.0
+|   |       |       ExtendedNumerics.BigDecimal.dll
+|   |       |       ExtendedNumerics.BigDecimal.xml
+|   |       |       
+|   |       +---netcoreapp3.1
+|   |       |       ExtendedNumerics.BigDecimal.dll
+|   |       |       ExtendedNumerics.BigDecimal.xml
+|   |       |       
+|   |       +---netstandard2.0
+|   |       |       ExtendedNumerics.BigDecimal.dll
+|   |       |       ExtendedNumerics.BigDecimal.xml
+|   |       |       
+|   |       \---netstandard2.1
+|   |               ExtendedNumerics.BigDecimal.dll
+|   |               ExtendedNumerics.BigDecimal.xml
+|   |               
+|   +---MathNet.Numerics.Signed.5.0.0
+|   |   |   .signature.p7s
+|   |   |   icon.png
+|   |   |   MathNet.Numerics.Signed.5.0.0.nupkg
+|   |   |   
+|   |   \---lib
+|   |       +---net461
+|   |       |       MathNet.Numerics.dll
+|   |       |       MathNet.Numerics.xml
+|   |       |       
+|   |       +---net48
+|   |       |       MathNet.Numerics.dll
+|   |       |       MathNet.Numerics.xml
+|   |       |       
+|   |       +---net5.0
+|   |       |       MathNet.Numerics.dll
+|   |       |       MathNet.Numerics.xml
+|   |       |       
+|   |       +---net6.0
+|   |       |       MathNet.Numerics.dll
+|   |       |       MathNet.Numerics.xml
+|   |       |       
+|   |       \---netstandard2.0
+|   |               MathNet.Numerics.dll
+|   |               MathNet.Numerics.xml
+|   |               
+|   +---Microsoft.IO.RecyclableMemoryStream.3.0.1
+|   |   |   .signature.p7s
+|   |   |   Microsoft.IO.RecyclableMemoryStream.3.0.1.nupkg
+|   |   |   README.md
+|   |   |   
+|   |   \---lib
+|   |       +---net6.0
+|   |       |       Microsoft.IO.RecyclableMemoryStream.dll
+|   |       |       Microsoft.IO.RecyclableMemoryStream.xml
+|   |       |       
+|   |       +---netstandard2.0
+|   |       |       Microsoft.IO.RecyclableMemoryStream.dll
+|   |       |       Microsoft.IO.RecyclableMemoryStream.xml
+|   |       |       
+|   |       \---netstandard2.1
+|   |               Microsoft.IO.RecyclableMemoryStream.dll
+|   |               Microsoft.IO.RecyclableMemoryStream.xml
+|   |               
+|   +---Newtonsoft.Json.13.0.4
+|   |   |   .signature.p7s
+|   |   |   LICENSE.md
+|   |   |   Newtonsoft.Json.13.0.4.nupkg
+|   |   |   packageIcon.png
+|   |   |   README.md
+|   |   |   
+|   |   \---lib
+|   |       +---net20
+|   |       |       Newtonsoft.Json.dll
+|   |       |       Newtonsoft.Json.xml
+|   |       |       
+|   |       +---net35
+|   |       |       Newtonsoft.Json.dll
+|   |       |       Newtonsoft.Json.xml
+|   |       |       
+|   |       +---net40
+|   |       |       Newtonsoft.Json.dll
+|   |       |       Newtonsoft.Json.xml
+|   |       |       
+|   |       +---net45
+|   |       |       Newtonsoft.Json.dll
+|   |       |       Newtonsoft.Json.xml
+|   |       |       
+|   |       +---net6.0
+|   |       |       Newtonsoft.Json.dll
+|   |       |       Newtonsoft.Json.xml
+|   |       |       
+|   |       +---netstandard1.0
+|   |       |       Newtonsoft.Json.dll
+|   |       |       Newtonsoft.Json.xml
+|   |       |       
+|   |       +---netstandard1.3
+|   |       |       Newtonsoft.Json.dll
+|   |       |       Newtonsoft.Json.xml
+|   |       |       
+|   |       \---netstandard2.0
+|   |               Newtonsoft.Json.dll
+|   |               Newtonsoft.Json.xml
+|   |               
+|   +---NPOI.2.7.6
+|   |   |   .signature.p7s
+|   |   |   LICENSE
+|   |   |   NPOI.2.7.6.nupkg
+|   |   |   README.md
+|   |   |   
+|   |   +---lib
+|   |   |   +---net472
+|   |   |   |       NPOI.Core.dll
+|   |   |   |       NPOI.Core.pdb
+|   |   |   |       NPOI.Core.xml
+|   |   |   |       NPOI.OOXML.dll
+|   |   |   |       NPOI.OOXML.pdb
+|   |   |   |       NPOI.OOXML.xml
+|   |   |   |       NPOI.OpenXml4Net.dll
+|   |   |   |       NPOI.OpenXml4Net.pdb
+|   |   |   |       NPOI.OpenXml4Net.xml
+|   |   |   |       NPOI.OpenXmlFormats.dll
+|   |   |   |       NPOI.OpenXmlFormats.pdb
+|   |   |   |       NPOI.OpenXmlFormats.xml
+|   |   |   |       
+|   |   |   +---net8.0
+|   |   |   |       NPOI.Core.dll
+|   |   |   |       NPOI.Core.pdb
+|   |   |   |       NPOI.Core.xml
+|   |   |   |       NPOI.OOXML.dll
+|   |   |   |       NPOI.OOXML.pdb
+|   |   |   |       NPOI.OOXML.xml
+|   |   |   |       NPOI.OpenXml4Net.dll
+|   |   |   |       NPOI.OpenXml4Net.pdb
+|   |   |   |       NPOI.OpenXml4Net.xml
+|   |   |   |       NPOI.OpenXmlFormats.dll
+|   |   |   |       NPOI.OpenXmlFormats.pdb
+|   |   |   |       NPOI.OpenXmlFormats.xml
+|   |   |   |       
+|   |   |   +---netstandard2.0
+|   |   |   |       NPOI.Core.dll
+|   |   |   |       NPOI.Core.pdb
+|   |   |   |       NPOI.Core.xml
+|   |   |   |       NPOI.OOXML.dll
+|   |   |   |       NPOI.OOXML.pdb
+|   |   |   |       NPOI.OOXML.xml
+|   |   |   |       NPOI.OpenXml4Net.dll
+|   |   |   |       NPOI.OpenXml4Net.pdb
+|   |   |   |       NPOI.OpenXml4Net.xml
+|   |   |   |       NPOI.OpenXmlFormats.dll
+|   |   |   |       NPOI.OpenXmlFormats.pdb
+|   |   |   |       NPOI.OpenXmlFormats.xml
+|   |   |   |       
+|   |   |   \---netstandard2.1
+|   |   |           NPOI.Core.dll
+|   |   |           NPOI.Core.pdb
+|   |   |           NPOI.Core.xml
+|   |   |           NPOI.OOXML.dll
+|   |   |           NPOI.OOXML.pdb
+|   |   |           NPOI.OOXML.xml
+|   |   |           NPOI.OpenXml4Net.dll
+|   |   |           NPOI.OpenXml4Net.pdb
+|   |   |           NPOI.OpenXml4Net.xml
+|   |   |           NPOI.OpenXmlFormats.dll
+|   |   |           NPOI.OpenXmlFormats.pdb
+|   |   |           NPOI.OpenXmlFormats.xml
+|   |   |           
+|   |   \---logo
+|   |           120_120.jpg
+|   |           240_240.png
+|   |           32_32.jpg
+|   |           60_60.jpg
+|   |           
+|   +---NSax.1.0.2
+|   |   |   .signature.p7s
+|   |   |   NSax.1.0.2.nupkg
+|   |   |   README.md
+|   |   |   
+|   |   \---lib
+|   |       +---net472
+|   |       |       NSax.dll
+|   |       |       
+|   |       +---net6.0
+|   |       |       NSax.dll
+|   |       |       
+|   |       +---netstandard2.0
+|   |       |       NSax.dll
+|   |       |       
+|   |       \---netstandard2.1
+|   |               NSax.dll
+|   |               
+|   +---SharpZipLib.1.4.2
+|   |   |   .signature.p7s
+|   |   |   SharpZipLib.1.4.2.nupkg
+|   |   |   
+|   |   +---images
+|   |   |       sharpziplib-nuget-256x256.png
+|   |   |       
+|   |   \---lib
+|   |       +---net6.0
+|   |       |       ICSharpCode.SharpZipLib.dll
+|   |       |       ICSharpCode.SharpZipLib.pdb
+|   |       |       ICSharpCode.SharpZipLib.xml
+|   |       |       
+|   |       +---netstandard2.0
+|   |       |       ICSharpCode.SharpZipLib.dll
+|   |       |       ICSharpCode.SharpZipLib.pdb
+|   |       |       ICSharpCode.SharpZipLib.xml
+|   |       |       
+|   |       \---netstandard2.1
+|   |               ICSharpCode.SharpZipLib.dll
+|   |               ICSharpCode.SharpZipLib.pdb
+|   |               ICSharpCode.SharpZipLib.xml
+|   |               
+|   +---SixLabors.Fonts.1.0.1
+|   |   |   .signature.p7s
+|   |   |   SixLabors.Fonts.1.0.1.nupkg
+|   |   |   sixlabors.fonts.128.png
+|   |   |   
+|   |   \---lib
+|   |       +---netcoreapp3.1
+|   |       |       SixLabors.Fonts.dll
+|   |       |       SixLabors.Fonts.xml
+|   |       |       
+|   |       +---netstandard2.0
+|   |       |       SixLabors.Fonts.dll
+|   |       |       SixLabors.Fonts.xml
+|   |       |       
+|   |       \---netstandard2.1
+|   |               SixLabors.Fonts.dll
+|   |               SixLabors.Fonts.xml
+|   |               
+|   +---SixLabors.ImageSharp.2.1.11
+|   |   |   .signature.p7s
+|   |   |   sixlabors.imagesharp.128.png
+|   |   |   SixLabors.ImageSharp.2.1.11.nupkg
+|   |   |   
+|   |   \---lib
+|   |       +---net472
+|   |       |       SixLabors.ImageSharp.dll
+|   |       |       SixLabors.ImageSharp.xml
+|   |       |       
+|   |       +---netcoreapp2.1
+|   |       |       SixLabors.ImageSharp.dll
+|   |       |       SixLabors.ImageSharp.xml
+|   |       |       
+|   |       +---netcoreapp3.1
+|   |       |       SixLabors.ImageSharp.dll
+|   |       |       SixLabors.ImageSharp.xml
+|   |       |       
+|   |       +---netstandard2.0
+|   |       |       SixLabors.ImageSharp.dll
+|   |       |       SixLabors.ImageSharp.xml
+|   |       |       
+|   |       \---netstandard2.1
+|   |               SixLabors.ImageSharp.dll
+|   |               SixLabors.ImageSharp.xml
+|   |               
+|   +---System.Buffers.4.5.1
+|   |   |   .signature.p7s
+|   |   |   LICENSE.TXT
+|   |   |   System.Buffers.4.5.1.nupkg
+|   |   |   THIRD-PARTY-NOTICES.TXT
+|   |   |   useSharedDesignerContext.txt
+|   |   |   version.txt
+|   |   |   
+|   |   +---lib
+|   |   |   +---net461
+|   |   |   |       System.Buffers.dll
+|   |   |   |       System.Buffers.xml
+|   |   |   |       
+|   |   |   +---netcoreapp2.0
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---netstandard1.1
+|   |   |   |       System.Buffers.dll
+|   |   |   |       System.Buffers.xml
+|   |   |   |       
+|   |   |   +---netstandard2.0
+|   |   |   |       System.Buffers.dll
+|   |   |   |       System.Buffers.xml
+|   |   |   |       
+|   |   |   \---uap10.0.16299
+|   |   |           _._
+|   |   |           
+|   |   \---ref
+|   |       +---net45
+|   |       |       System.Buffers.dll
+|   |       |       System.Buffers.xml
+|   |       |       
+|   |       +---netcoreapp2.0
+|   |       |       _._
+|   |       |       
+|   |       +---netstandard1.1
+|   |       |       System.Buffers.dll
+|   |       |       System.Buffers.xml
+|   |       |       
+|   |       +---netstandard2.0
+|   |       |       System.Buffers.dll
+|   |       |       System.Buffers.xml
+|   |       |       
+|   |       \---uap10.0.16299
+|   |               _._
+|   |               
+|   +---System.ComponentModel.Annotations.5.0.0
+|   |   |   .signature.p7s
+|   |   |   Icon.png
+|   |   |   LICENSE.TXT
+|   |   |   System.ComponentModel.Annotations.5.0.0.nupkg
+|   |   |   THIRD-PARTY-NOTICES.TXT
+|   |   |   useSharedDesignerContext.txt
+|   |   |   version.txt
+|   |   |   
+|   |   +---lib
+|   |   |   +---MonoAndroid10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---MonoTouch10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---net45
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---net461
+|   |   |   |       System.ComponentModel.Annotations.dll
+|   |   |   |       
+|   |   |   +---netcore50
+|   |   |   |       System.ComponentModel.Annotations.dll
+|   |   |   |       
+|   |   |   +---netstandard1.4
+|   |   |   |       System.ComponentModel.Annotations.dll
+|   |   |   |       
+|   |   |   +---netstandard2.0
+|   |   |   |       System.ComponentModel.Annotations.dll
+|   |   |   |       
+|   |   |   +---netstandard2.1
+|   |   |   |       System.ComponentModel.Annotations.dll
+|   |   |   |       System.ComponentModel.Annotations.xml
+|   |   |   |       
+|   |   |   +---portable-net45+win8
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---win8
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---xamarinios10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---xamarinmac20
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---xamarintvos10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   \---xamarinwatchos10
+|   |   |           _._
+|   |   |           
+|   |   \---ref
+|   |       +---MonoAndroid10
+|   |       |       _._
+|   |       |       
+|   |       +---MonoTouch10
+|   |       |       _._
+|   |       |       
+|   |       +---net45
+|   |       |       _._
+|   |       |       
+|   |       +---net461
+|   |       |       System.ComponentModel.Annotations.dll
+|   |       |       System.ComponentModel.Annotations.xml
+|   |       |       
+|   |       +---netcore50
+|   |       |   |   System.ComponentModel.Annotations.dll
+|   |       |   |   System.ComponentModel.Annotations.xml
+|   |       |   |   
+|   |       |   +---de
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---es
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---fr
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---it
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---ja
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---ko
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---ru
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---zh-hans
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   \---zh-hant
+|   |       |           System.ComponentModel.Annotations.xml
+|   |       |           
+|   |       +---netstandard1.1
+|   |       |   |   System.ComponentModel.Annotations.dll
+|   |       |   |   System.ComponentModel.Annotations.xml
+|   |       |   |   
+|   |       |   +---de
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---es
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---fr
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---it
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---ja
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---ko
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---ru
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---zh-hans
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   \---zh-hant
+|   |       |           System.ComponentModel.Annotations.xml
+|   |       |           
+|   |       +---netstandard1.3
+|   |       |   |   System.ComponentModel.Annotations.dll
+|   |       |   |   System.ComponentModel.Annotations.xml
+|   |       |   |   
+|   |       |   +---de
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---es
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---fr
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---it
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---ja
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---ko
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---ru
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---zh-hans
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   \---zh-hant
+|   |       |           System.ComponentModel.Annotations.xml
+|   |       |           
+|   |       +---netstandard1.4
+|   |       |   |   System.ComponentModel.Annotations.dll
+|   |       |   |   System.ComponentModel.Annotations.xml
+|   |       |   |   
+|   |       |   +---de
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---es
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---fr
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---it
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---ja
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---ko
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---ru
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   +---zh-hans
+|   |       |   |       System.ComponentModel.Annotations.xml
+|   |       |   |       
+|   |       |   \---zh-hant
+|   |       |           System.ComponentModel.Annotations.xml
+|   |       |           
+|   |       +---netstandard2.0
+|   |       |       System.ComponentModel.Annotations.dll
+|   |       |       System.ComponentModel.Annotations.xml
+|   |       |       
+|   |       +---netstandard2.1
+|   |       |       System.ComponentModel.Annotations.dll
+|   |       |       System.ComponentModel.Annotations.xml
+|   |       |       
+|   |       +---portable-net45+win8
+|   |       |       _._
+|   |       |       
+|   |       +---win8
+|   |       |       _._
+|   |       |       
+|   |       +---xamarinios10
+|   |       |       _._
+|   |       |       
+|   |       +---xamarinmac20
+|   |       |       _._
+|   |       |       
+|   |       +---xamarintvos10
+|   |       |       _._
+|   |       |       
+|   |       \---xamarinwatchos10
+|   |               _._
+|   |               
+|   +---System.Memory.4.5.5
+|   |   |   .signature.p7s
+|   |   |   LICENSE.TXT
+|   |   |   System.Memory.4.5.5.nupkg
+|   |   |   THIRD-PARTY-NOTICES.TXT
+|   |   |   useSharedDesignerContext.txt
+|   |   |   version.txt
+|   |   |   
+|   |   +---lib
+|   |   |   +---net461
+|   |   |   |       System.Memory.dll
+|   |   |   |       System.Memory.xml
+|   |   |   |       
+|   |   |   +---netcoreapp2.1
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---netstandard1.1
+|   |   |   |       System.Memory.dll
+|   |   |   |       System.Memory.xml
+|   |   |   |       
+|   |   |   \---netstandard2.0
+|   |   |           System.Memory.dll
+|   |   |           System.Memory.xml
+|   |   |           
+|   |   \---ref
+|   |       \---netcoreapp2.1
+|   |               _._
+|   |               
+|   +---System.Numerics.Vectors.4.5.0
+|   |   |   .signature.p7s
+|   |   |   LICENSE.TXT
+|   |   |   System.Numerics.Vectors.4.5.0.nupkg
+|   |   |   THIRD-PARTY-NOTICES.TXT
+|   |   |   useSharedDesignerContext.txt
+|   |   |   version.txt
+|   |   |   
+|   |   +---lib
+|   |   |   +---MonoAndroid10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---MonoTouch10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---net46
+|   |   |   |       System.Numerics.Vectors.dll
+|   |   |   |       System.Numerics.Vectors.xml
+|   |   |   |       
+|   |   |   +---netcoreapp2.0
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---netstandard1.0
+|   |   |   |       System.Numerics.Vectors.dll
+|   |   |   |       System.Numerics.Vectors.xml
+|   |   |   |       
+|   |   |   +---netstandard2.0
+|   |   |   |       System.Numerics.Vectors.dll
+|   |   |   |       System.Numerics.Vectors.xml
+|   |   |   |       
+|   |   |   +---portable-net45+win8+wp8+wpa81
+|   |   |   |       System.Numerics.Vectors.dll
+|   |   |   |       System.Numerics.Vectors.xml
+|   |   |   |       
+|   |   |   +---uap10.0.16299
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---xamarinios10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---xamarinmac20
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---xamarintvos10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   \---xamarinwatchos10
+|   |   |           _._
+|   |   |           
+|   |   \---ref
+|   |       +---MonoAndroid10
+|   |       |       _._
+|   |       |       
+|   |       +---MonoTouch10
+|   |       |       _._
+|   |       |       
+|   |       +---net45
+|   |       |       System.Numerics.Vectors.dll
+|   |       |       System.Numerics.Vectors.xml
+|   |       |       
+|   |       +---net46
+|   |       |       System.Numerics.Vectors.dll
+|   |       |       System.Numerics.Vectors.xml
+|   |       |       
+|   |       +---netcoreapp2.0
+|   |       |       _._
+|   |       |       
+|   |       +---netstandard1.0
+|   |       |       System.Numerics.Vectors.dll
+|   |       |       System.Numerics.Vectors.xml
+|   |       |       
+|   |       +---netstandard2.0
+|   |       |       System.Numerics.Vectors.dll
+|   |       |       System.Numerics.Vectors.xml
+|   |       |       
+|   |       +---uap10.0.16299
+|   |       |       _._
+|   |       |       
+|   |       +---xamarinios10
+|   |       |       _._
+|   |       |       
+|   |       +---xamarinmac20
+|   |       |       _._
+|   |       |       
+|   |       +---xamarintvos10
+|   |       |       _._
+|   |       |       
+|   |       \---xamarinwatchos10
+|   |               _._
+|   |               
+|   +---System.Runtime.CompilerServices.Unsafe.4.5.3
+|   |   |   .signature.p7s
+|   |   |   LICENSE.TXT
+|   |   |   System.Runtime.CompilerServices.Unsafe.4.5.3.nupkg
+|   |   |   THIRD-PARTY-NOTICES.TXT
+|   |   |   useSharedDesignerContext.txt
+|   |   |   version.txt
+|   |   |   
+|   |   +---lib
+|   |   |   +---net461
+|   |   |   |       System.Runtime.CompilerServices.Unsafe.dll
+|   |   |   |       System.Runtime.CompilerServices.Unsafe.xml
+|   |   |   |       
+|   |   |   +---netcoreapp2.0
+|   |   |   |       System.Runtime.CompilerServices.Unsafe.dll
+|   |   |   |       System.Runtime.CompilerServices.Unsafe.xml
+|   |   |   |       
+|   |   |   +---netstandard1.0
+|   |   |   |       System.Runtime.CompilerServices.Unsafe.dll
+|   |   |   |       System.Runtime.CompilerServices.Unsafe.xml
+|   |   |   |       
+|   |   |   \---netstandard2.0
+|   |   |           System.Runtime.CompilerServices.Unsafe.dll
+|   |   |           System.Runtime.CompilerServices.Unsafe.xml
+|   |   |           
+|   |   \---ref
+|   |       +---net461
+|   |       |       System.Runtime.CompilerServices.Unsafe.dll
+|   |       |       System.Runtime.CompilerServices.Unsafe.xml
+|   |       |       
+|   |       +---netstandard1.0
+|   |       |       System.Runtime.CompilerServices.Unsafe.dll
+|   |       |       System.Runtime.CompilerServices.Unsafe.xml
+|   |       |       
+|   |       \---netstandard2.0
+|   |               System.Runtime.CompilerServices.Unsafe.dll
+|   |               System.Runtime.CompilerServices.Unsafe.xml
+|   |               
+|   +---System.Runtime.CompilerServices.Unsafe.6.0.0
+|   |   |   .signature.p7s
+|   |   |   Icon.png
+|   |   |   LICENSE.TXT
+|   |   |   System.Runtime.CompilerServices.Unsafe.6.0.0.nupkg
+|   |   |   THIRD-PARTY-NOTICES.TXT
+|   |   |   useSharedDesignerContext.txt
+|   |   |   
+|   |   +---buildTransitive
+|   |   |   +---netcoreapp2.0
+|   |   |   |       System.Runtime.CompilerServices.Unsafe.targets
+|   |   |   |       
+|   |   |   \---netcoreapp3.1
+|   |   |           _._
+|   |   |           
+|   |   \---lib
+|   |       +---net461
+|   |       |       System.Runtime.CompilerServices.Unsafe.dll
+|   |       |       System.Runtime.CompilerServices.Unsafe.xml
+|   |       |       
+|   |       +---net6.0
+|   |       |       System.Runtime.CompilerServices.Unsafe.dll
+|   |       |       System.Runtime.CompilerServices.Unsafe.xml
+|   |       |       
+|   |       +---netcoreapp3.1
+|   |       |       System.Runtime.CompilerServices.Unsafe.dll
+|   |       |       System.Runtime.CompilerServices.Unsafe.xml
+|   |       |       
+|   |       \---netstandard2.0
+|   |               System.Runtime.CompilerServices.Unsafe.dll
+|   |               System.Runtime.CompilerServices.Unsafe.xml
+|   |               
+|   +---System.Security.Cryptography.Xml.8.0.2
+|   |   |   .signature.p7s
+|   |   |   Icon.png
+|   |   |   LICENSE.TXT
+|   |   |   System.Security.Cryptography.Xml.8.0.2.nupkg
+|   |   |   THIRD-PARTY-NOTICES.TXT
+|   |   |   useSharedDesignerContext.txt
+|   |   |   
+|   |   +---buildTransitive
+|   |   |   +---net461
+|   |   |   |       System.Security.Cryptography.Xml.targets
+|   |   |   |       
+|   |   |   +---net462
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---net6.0
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   \---netcoreapp2.0
+|   |   |           System.Security.Cryptography.Xml.targets
+|   |   |           
+|   |   \---lib
+|   |       +---net462
+|   |       |       System.Security.Cryptography.Xml.dll
+|   |       |       System.Security.Cryptography.Xml.xml
+|   |       |       
+|   |       +---net6.0
+|   |       |       System.Security.Cryptography.Xml.dll
+|   |       |       System.Security.Cryptography.Xml.xml
+|   |       |       
+|   |       +---net7.0
+|   |       |       System.Security.Cryptography.Xml.dll
+|   |       |       System.Security.Cryptography.Xml.xml
+|   |       |       
+|   |       +---net8.0
+|   |       |       System.Security.Cryptography.Xml.dll
+|   |       |       System.Security.Cryptography.Xml.xml
+|   |       |       
+|   |       \---netstandard2.0
+|   |               System.Security.Cryptography.Xml.dll
+|   |               System.Security.Cryptography.Xml.xml
+|   |               
+|   +---System.Text.Encoding.CodePages.5.0.0
+|   |   |   .signature.p7s
+|   |   |   Icon.png
+|   |   |   LICENSE.TXT
+|   |   |   System.Text.Encoding.CodePages.5.0.0.nupkg
+|   |   |   THIRD-PARTY-NOTICES.TXT
+|   |   |   useSharedDesignerContext.txt
+|   |   |   version.txt
+|   |   |   
+|   |   +---lib
+|   |   |   +---MonoAndroid10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---MonoTouch10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---net46
+|   |   |   |       System.Text.Encoding.CodePages.dll
+|   |   |   |       
+|   |   |   +---net461
+|   |   |   |       System.Text.Encoding.CodePages.dll
+|   |   |   |       System.Text.Encoding.CodePages.xml
+|   |   |   |       
+|   |   |   +---netstandard1.3
+|   |   |   |       System.Text.Encoding.CodePages.dll
+|   |   |   |       
+|   |   |   +---netstandard2.0
+|   |   |   |       System.Text.Encoding.CodePages.dll
+|   |   |   |       System.Text.Encoding.CodePages.xml
+|   |   |   |       
+|   |   |   +---xamarinios10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---xamarinmac20
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---xamarintvos10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   \---xamarinwatchos10
+|   |   |           _._
+|   |   |           
+|   |   +---ref
+|   |   |   +---MonoAndroid10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---MonoTouch10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---xamarinios10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---xamarinmac20
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---xamarintvos10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   \---xamarinwatchos10
+|   |   |           _._
+|   |   |           
+|   |   \---runtimes
+|   |       \---win
+|   |           \---lib
+|   |               +---net461
+|   |               |       System.Text.Encoding.CodePages.dll
+|   |               |       System.Text.Encoding.CodePages.xml
+|   |               |       
+|   |               +---netcoreapp2.0
+|   |               |       System.Text.Encoding.CodePages.dll
+|   |               |       System.Text.Encoding.CodePages.xml
+|   |               |       
+|   |               +---netstandard1.3
+|   |               |       System.Text.Encoding.CodePages.dll
+|   |               |       
+|   |               \---netstandard2.0
+|   |                       System.Text.Encoding.CodePages.dll
+|   |                       System.Text.Encoding.CodePages.xml
+|   |                       
+|   +---System.Threading.Tasks.Extensions.4.5.2
+|   |   |   .signature.p7s
+|   |   |   LICENSE.TXT
+|   |   |   System.Threading.Tasks.Extensions.4.5.2.nupkg
+|   |   |   THIRD-PARTY-NOTICES.TXT
+|   |   |   useSharedDesignerContext.txt
+|   |   |   version.txt
+|   |   |   
+|   |   +---lib
+|   |   |   +---MonoAndroid10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---MonoTouch10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---netcoreapp2.1
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---netstandard1.0
+|   |   |   |       System.Threading.Tasks.Extensions.dll
+|   |   |   |       System.Threading.Tasks.Extensions.xml
+|   |   |   |       
+|   |   |   +---netstandard2.0
+|   |   |   |       System.Threading.Tasks.Extensions.dll
+|   |   |   |       System.Threading.Tasks.Extensions.xml
+|   |   |   |       
+|   |   |   +---portable-net45+win8+wp8+wpa81
+|   |   |   |       System.Threading.Tasks.Extensions.dll
+|   |   |   |       System.Threading.Tasks.Extensions.xml
+|   |   |   |       
+|   |   |   +---xamarinios10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---xamarinmac20
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   +---xamarintvos10
+|   |   |   |       _._
+|   |   |   |       
+|   |   |   \---xamarinwatchos10
+|   |   |           _._
+|   |   |           
+|   |   \---ref
+|   |       +---MonoAndroid10
+|   |       |       _._
+|   |       |       
+|   |       +---MonoTouch10
+|   |       |       _._
+|   |       |       
+|   |       +---netcoreapp2.1
+|   |       |       _._
+|   |       |       
+|   |       +---xamarinios10
+|   |       |       _._
+|   |       |       
+|   |       +---xamarinmac20
+|   |       |       _._
+|   |       |       
+|   |       +---xamarintvos10
+|   |       |       _._
+|   |       |       
+|   |       \---xamarinwatchos10
+|   |               _._
+|   |               
+|   \---ZString.2.6.0
+|       |   .signature.p7s
+|       |   Icon.png
+|       |   ZString.2.6.0.nupkg
+|       |   
+|       \---lib
+|           +---net6.0
+|           |       ZString.dll
+|           |       ZString.xml
+|           |       
+|           +---net7.0
+|           |       ZString.dll
+|           |       ZString.xml
+|           |       
+|           +---netstandard2.0
+|           |       ZString.dll
+|           |       ZString.xml
+|           |       
+|           \---netstandard2.1
+|                   ZString.dll
+|                   ZString.xml
+|                   
+\---PatientUI
+    |   App.config
+    |   FrmAddEditReminder.cs
+    |   FrmAddEditReminder.Designer.cs
+    |   FrmBloodSugarManage.cs
+    |   FrmBloodSugarManage.Designer.cs
+    |   FrmDietRecommend.cs
+    |   FrmDietRecommend.Designer.cs
+    |   FrmExercisePlan.cs
+    |   FrmExercisePlan.Designer.cs
+    |   FrmFoodDetail.cs
+    |   FrmFoodDetail.Designer.cs
+    |   FrmMedicineManage.cs
+    |   FrmMedicineManage.Designer.cs
+    |   FrmMedicineReminder.cs
+    |   FrmMedicineReminder.Designer.cs
+    |   FrmPatientForgotPwd.cs
+    |   FrmPatientForgotPwd.Designer.cs
+    |   FrmPatientForgotPwd.resx
+    |   FrmPatientHome.cs
+    |   FrmPatientHome.Designer.cs
+    |   FrmPatientLogin.cs
+    |   FrmPatientLogin.Designer.cs
+    |   FrmPatientLogin.resx
+    |   FrmPatientMain.cs
+    |   FrmPatientMain.Designer.cs
+    |   FrmPatientMain.resx
+    |   FrmPatientMyInfo.cs
+    |   FrmPatientMyInfo.Designer.cs
+    |   FrmPatientRegister.cs
+    |   FrmPatientRegister.Designer.cs
+    |   FrmPatientRegister.resx
+    |   FrmSelectBloodSugar.cs
+    |   FrmSelectBloodSugar.Designer.cs
+    |   PatientUI.csproj
+    |   Program.cs
+    |   
+    +---bin
+    |   +---Debug
+    |   |       Diabetes_BLL.dll
+    |   |       Diabetes_BLL.pdb
+    |   |       Diabetes_DAL.dll
+    |   |       Diabetes_DAL.pdb
+    |   |       Diabetes_Model.dll
+    |   |       Diabetes_Model.pdb
+    |   |       Diabetes_Tools.dll
+    |   |       Diabetes_Tools.pdb
+    |   |       EPPlus.dll
+    |   |       EPPlus.Interfaces.dll
+    |   |       EPPlus.xml
+    |   |       Microsoft.IO.RecyclableMemoryStream.dll
+    |   |       Microsoft.IO.RecyclableMemoryStream.xml
+    |   |       Newtonsoft.Json.dll
+    |   |       Newtonsoft.Json.xml
+    |   |       PatientUI.exe
+    |   |       PatientUI.exe.config
+    |   |       PatientUI.pdb
+    |   |       System.Buffers.dll
+    |   |       System.Buffers.xml
+    |   |       System.Memory.dll
+    |   |       System.Memory.xml
+    |   |       System.Numerics.Vectors.dll
+    |   |       System.Numerics.Vectors.xml
+    |   |       System.Runtime.CompilerServices.Unsafe.dll
+    |   |       System.Runtime.CompilerServices.Unsafe.xml
+    |   |       
+    |   \---Release
+    +---obj
+    |   +---Debug
+    |   |   |   .NETFramework,Version=v4.8.AssemblyAttributes.cs
+    |   |   |   DesignTimeResolveAssemblyReferences.cache
+    |   |   |   DesignTimeResolveAssemblyReferencesInput.cache
+    |   |   |   Patient.csproj.AssemblyReference.cache
+    |   |   |   PatientUI.csproj.AssemblyReference.cache
+    |   |   |   PatientUI.csproj.CoreCompileInputs.cache
+    |   |   |   PatientUI.csproj.FileListAbsolute.txt
+    |   |   |   PatientUI.csproj.GenerateResource.cache
+    |   |   |   PatientUI.csproj.Up2Date
+    |   |   |   PatientUI.exe
+    |   |   |   PatientUI.FrmPatientForgotPwd.resources
+    |   |   |   PatientUI.FrmPatientLogin.resources
+    |   |   |   PatientUI.FrmPatientMain.resources
+    |   |   |   PatientUI.FrmPatientRegister.resources
+    |   |   |   PatientUI.pdb
+    |   |   |   PatientUI.Properties.Resources.resources
+    |   |   |   
+    |   |   \---TempPE
+    |   \---Release
+    |           .NETFramework,Version=v4.8.AssemblyAttributes.cs
+    |           PatientUI.csproj.AssemblyReference.cache
+    |           
+    \---Properties
+            AssemblyInfo.cs
+            Resources.Designer.cs
+            Resources.resx
+            Settings.Designer.cs
+            Settings.settings
+            
