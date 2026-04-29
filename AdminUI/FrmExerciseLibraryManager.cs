@@ -22,8 +22,8 @@ namespace AdminUI
         /// <summary>
         /// 整体偏移（往右/往下移动）
         /// </summary>
-        private readonly int _globalContentOffsetX = 20;
-        private readonly int _globalContentOffsetY = 20;
+        private readonly int _globalContentOffsetX = 1;
+        private readonly int _globalContentOffsetY = 1;
         /// <summary>
         /// 内容最小尺寸（加宽适配运动库多字段）
         /// </summary>

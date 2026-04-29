@@ -23,13 +23,23 @@ namespace DAL
         }
 
         #region 原有核心方法（完全保留，未做任何修改）
-        #region 1. 获取降糖药物字典列表
+        #region 修复：患者端药物字典查询（仅查必要字段+同步新表+过滤有效数据）
         /// <summary>
-        /// 获取所有降糖药物字典数据
+        /// 获取所有启用的降糖药物字典数据（患者端专用，仅返回必要字段，避免类型转换异常）
         /// </summary>
         public List<AntidiabeticDrug> GetDrugDictionaryList()
         {
-            string sql = "SELECT * FROM Diabetes_Antidiabetic_Drugs WHERE 1=1 ORDER BY DrugGenericName ASC";
+            // ✅ 仅查询患者端需要的2个字段，彻底避免类型转换问题
+            // ✅ 同步新药物库表 Diabetes_Medicine_Master
+            // ✅ 过滤已删除(IsDeleted=0)和禁用(EnableStatus='启用')的药物
+            string sql = @"
+        SELECT 
+            DrugCode, 
+            DrugGenericName 
+        FROM Diabetes_Medicine_Master 
+        WHERE IsDeleted = 0 AND EnableStatus = '启用' 
+        ORDER BY DrugGenericName ASC";
+
             return SqlHelper.GetModelList<AntidiabeticDrug>(sql);
         }
         #endregion

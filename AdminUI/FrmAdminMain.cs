@@ -259,6 +259,7 @@ namespace AdminUI
             TreeNode dataManage = new TreeNode("系统数据管理");
             dataManage.Nodes.Add(new TreeNode("食物库管理") { Tag = "FrmFoodLibraryManager" });
             dataManage.Nodes.Add(new TreeNode("运动库管理") { Tag = "FrmExerciseLibraryManager" });
+            dataManage.Nodes.Add(new TreeNode("血糖数据管理") { Tag = "FrmBloodSugarLibraryManager" }); // 新增
             dataManage.Nodes.Add(new TreeNode("药物库管理") { Tag = "FrmDrugLibraryManager" });
             dataManage.Nodes.Add(new TreeNode("字典管理") { Tag = "FrmDictionaryManager" });
 

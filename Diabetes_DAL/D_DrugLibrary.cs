@@ -15,67 +15,77 @@ namespace DAL
     {
         #region 降糖药物核心CRUD
         /// <summary>
-        /// 多条件查询降糖药物列表（和数据库表列名完全匹配，无无效列）
+        /// 多条件查询降糖药物列表（优化版：包含糖尿病用药核心管理字段）
         /// </summary>
         public DataTable GetAntidiabeticDrugList(string drugCategory, string searchKey, string prescriptionType,
             string adminRoute, string medicalInsuranceType, string enableStatus, DateTime? updateStart, DateTime? updateEnd)
         {
             StringBuilder sql = new StringBuilder(@"
-        SELECT 
-            DrugID, DrugCode, DrugCategory, DrugGenericName, TradeName, DosageForm, Specification,
-            Manufacturer, PrescriptionType, MedicalInsuranceType, AdminRoute, EnableStatus, AuditStatus,
-            CreateTime, CreateUser, UpdateTime, UpdateUser, Version, AuditLevel, CurrentAuditor
-        FROM Diabetes_Antidiabetic_Drugs 
-        WHERE IsDeleted = 0 ");
+            SELECT 
+                DrugID, DrugCode, DrugCategory, SubCategory, DrugGenericName, TradeName, 
+                DosageForm, Specification, AdminRoute, DailyDosageMin, DailyDosageMax, DosageUnit,
+                ApprovalNumber, Manufacturer, MarketHolder, PrescriptionType, MedicalInsuranceType,
+                GuideGrade, FirstSecondLine, IsFirstLine, IsDomestic, EnableStatus, AuditStatus,
+                CreateTime, UpdateTime, Version, AuditLevel, CurrentAuditor, Remark
+            FROM Diabetes_Medicine_Master
+            WHERE IsDeleted = 0  ");
 
             List<SqlParameter> paramList = new List<SqlParameter>();
 
-            // 动态拼接条件
+            // 扩展搜索范围：支持通用名、商品名、批准文号、药物编码、适应症、生产厂家搜索
             if (!string.IsNullOrWhiteSpace(searchKey))
             {
                 sql.Append(@" AND (DrugGenericName LIKE @SearchKey OR TradeName LIKE @SearchKey 
-                        OR ApprovalNumber LIKE @SearchKey OR DrugCode LIKE @SearchKey) ");
+                OR ApprovalNumber LIKE @SearchKey OR DrugCode LIKE @SearchKey
+                OR Manufacturer LIKE @SearchKey OR Indications LIKE @SearchKey) ");
                 paramList.Add(new SqlParameter("@SearchKey", $"%{searchKey}%"));
             }
+
             if (!string.IsNullOrWhiteSpace(drugCategory) && drugCategory != "全部")
             {
                 sql.Append(" AND DrugCategory = @DrugCategory ");
                 paramList.Add(new SqlParameter("@DrugCategory", drugCategory));
             }
+
             if (!string.IsNullOrWhiteSpace(prescriptionType) && prescriptionType != "全部")
             {
                 sql.Append(" AND PrescriptionType = @PrescriptionType ");
                 paramList.Add(new SqlParameter("@PrescriptionType", prescriptionType));
             }
+
             if (!string.IsNullOrWhiteSpace(adminRoute) && adminRoute != "全部")
             {
                 sql.Append(" AND AdminRoute = @AdminRoute ");
                 paramList.Add(new SqlParameter("@AdminRoute", adminRoute));
             }
+
             if (!string.IsNullOrWhiteSpace(medicalInsuranceType) && medicalInsuranceType != "全部")
             {
                 sql.Append(" AND MedicalInsuranceType = @MedicalInsuranceType ");
                 paramList.Add(new SqlParameter("@MedicalInsuranceType", medicalInsuranceType));
             }
+
             if (!string.IsNullOrWhiteSpace(enableStatus) && enableStatus != "全部")
             {
-                // 修复：和数据库表字符串类型匹配
                 sql.Append(" AND EnableStatus = @EnableStatus ");
                 paramList.Add(new SqlParameter("@EnableStatus", enableStatus));
             }
+
             // 时间范围条件
             if (updateStart.HasValue)
             {
                 sql.Append(" AND UpdateTime >= @UpdateStart ");
                 paramList.Add(new SqlParameter("@UpdateStart", updateStart.Value));
             }
+
             if (updateEnd.HasValue)
             {
                 sql.Append(" AND UpdateTime <= @UpdateEnd ");
                 paramList.Add(new SqlParameter("@UpdateEnd", updateEnd.Value.AddDays(1).AddSeconds(-1)));
             }
 
-            sql.Append(" ORDER BY CreateTime DESC ");
+            sql.Append(" ORDER BY IsFirstLine DESC, GuideGrade ASC, DrugGenericName ASC ");
+
             return SqlHelper.ExecuteDataTable(sql.ToString(), paramList.ToArray());
         }
 
@@ -84,7 +94,7 @@ namespace DAL
         /// </summary>
         public AntidiabeticDrug GetAntidiabeticDrugById(int drugId)
         {
-            string sql = "SELECT * FROM Diabetes_Antidiabetic_Drugs WHERE DrugID = @DrugID AND IsDeleted = 0";
+            string sql = "SELECT * FROM Diabetes_Medicine_Master WHERE DrugID = @DrugID AND IsDeleted = 0";
             SqlParameter[] param = { new SqlParameter("@DrugID", drugId) };
             return SqlHelper.GetModel<AntidiabeticDrug>(sql, param);
         }
@@ -95,18 +105,18 @@ namespace DAL
         public int AddAntidiabeticDrug(AntidiabeticDrug model)
         {
             string sql = @"
-INSERT INTO Diabetes_Antidiabetic_Drugs (
+INSERT INTO Diabetes_Medicine_Master(
     DrugCode, DrugCategory, DrugGenericName, TradeName, DosageForm, Specification, 
     DailyDosageRange, PeakTime_h, ActionDuration_h, HalfLife_h, UsageDosage, 
     RenalImpairmentNote, DataSource, ApprovalNumber, Manufacturer, MarketHolder, 
     PrescriptionType, MedicalInsuranceType, AdminRoute, ValidityPeriod, StorageCondition, 
-    EnableStatus, AuditStatus, AuditLevel, CurrentAuditor, Version, CreateTime, CreateUser, CreateBy, UpdateTime, UpdateUser, UpdateBy, UpdateLog, AuditRecord, IsDeleted, Remark
+    EnableStatus, AuditStatus, AuditLevel, CurrentAuditor, Version, CreateTime, CreateBy, UpdateTime, UpdateBy, UpdateLog, AuditRecord, IsDeleted, Remark
 ) VALUES (
     @DrugCode, @DrugCategory, @DrugGenericName, @TradeName, @DosageForm, @Specification, 
     @DailyDosageRange, @PeakTime_h, @ActionDuration_h, @HalfLife_h, @UsageDosage, 
     @RenalImpairmentNote, @DataSource, @ApprovalNumber, @Manufacturer, @MarketHolder, 
     @PrescriptionType, @MedicalInsuranceType, @AdminRoute, @ValidityPeriod, @StorageCondition, 
-    @EnableStatus, @AuditStatus, @AuditLevel, @CurrentAuditor, @Version, GETDATE(), @CreateUser, @CreateBy, GETDATE(), @UpdateUser, @UpdateBy, @UpdateLog, @AuditRecord, 0, @Remark
+    @EnableStatus, @AuditStatus, @AuditLevel, @CurrentAuditor, @Version, GETDATE(), @CreateBy, GETDATE(), @UpdateBy, @UpdateLog, @AuditRecord, 0, @Remark
 );
 SELECT SCOPE_IDENTITY();";
             SqlParameter[] param = {
@@ -136,9 +146,9 @@ SELECT SCOPE_IDENTITY();";
                 new SqlParameter("@AuditLevel", model.AuditLevel),
                 new SqlParameter("@CurrentAuditor", model.CurrentAuditor ?? (object)DBNull.Value),
                 new SqlParameter("@Version", model.Version ?? "1.0.0"),
-                new SqlParameter("@CreateUser", model.CreateUser ?? "系统"),
+            
                 new SqlParameter("@CreateBy", model.CreateBy),
-                new SqlParameter("@UpdateUser", model.UpdateUser ?? "系统"),
+         
                 new SqlParameter("@UpdateBy", model.UpdateBy),
                 new SqlParameter("@UpdateLog", model.UpdateLog ?? (object)DBNull.Value),
                 new SqlParameter("@AuditRecord", model.AuditRecord ?? (object)DBNull.Value),
@@ -154,7 +164,7 @@ SELECT SCOPE_IDENTITY();";
         public bool UpdateAntidiabeticDrug(AntidiabeticDrug model)
         {
             string sql = @"
-UPDATE Diabetes_Antidiabetic_Drugs SET 
+UPDATE Diabetes_Medicine_Master SET 
     DrugCode = @DrugCode,
     DrugCategory = @DrugCategory,
     DrugGenericName = @DrugGenericName,
@@ -230,7 +240,7 @@ WHERE DrugID = @DrugID AND IsDeleted = 0";
         /// </summary>
         public bool DeleteAntidiabeticDrug(int drugId)
         {
-            string sql = "UPDATE Diabetes_Antidiabetic_Drugs SET IsDeleted = 1, UpdateTime = GETDATE() WHERE DrugID = @DrugID";
+            string sql = "UPDATE  Diabetes_Medicine_Master SET IsDeleted = 1, UpdateTime = GETDATE() WHERE DrugID = @DrugID";
             SqlParameter[] param = { new SqlParameter("@DrugID", drugId) };
             return SqlHelper.ExecuteNonQuery(sql, param) > 0;
         }
@@ -243,7 +253,7 @@ WHERE DrugID = @DrugID AND IsDeleted = 0";
             if (drugIdList == null || drugIdList.Count == 0) return false;
             string drugIds = string.Join(",", drugIdList);
             string sql = $@"
-UPDATE Diabetes_Antidiabetic_Drugs SET 
+UPDATE  Diabetes_Medicine_Master SET 
     EnableStatus = @EnableStatus,
     UpdateTime = GETDATE(),
     UpdateBy = @UpdateBy,
@@ -262,7 +272,7 @@ WHERE DrugID IN ({drugIds}) AND IsDeleted = 0";
         /// </summary>
         public bool CheckDrugNameExists(string drugGenericName, int excludeDrugId = 0)
         {
-            string sql = "SELECT COUNT(1) FROM Diabetes_Antidiabetic_Drugs WHERE DrugGenericName = @DrugGenericName AND IsDeleted = 0";
+            string sql = "SELECT COUNT(1) FROM Diabetes_Medicine_Master WHERE DrugGenericName = @DrugGenericName AND IsDeleted = 0";
             List<SqlParameter> paramList = new List<SqlParameter>
             { new SqlParameter("@DrugGenericName", drugGenericName) };
             if (excludeDrugId > 0)
@@ -292,7 +302,7 @@ SELECT
     u.user_name AS CurrentAuditor,
     d.Remark AS ComplianceTip,
     d.CreateTime AS SubmitTime
-FROM Diabetes_Antidiabetic_Drugs d
+FROM  Diabetes_Medicine_Master d
 LEFT JOIN t_user u ON d.CurrentAuditor = u.user_id
 WHERE d.IsDeleted = 0");
             List<SqlParameter> paramList = new List<SqlParameter>();
@@ -321,7 +331,7 @@ WHERE d.IsDeleted = 0");
         public bool UpdateDrugAuditStatus(int drugId, string auditStatus, int auditLevel, int auditBy, string auditOpinion)
         {
             string updateSql = @"
-UPDATE Diabetes_Antidiabetic_Drugs SET 
+UPDATE  Diabetes_Medicine_Master SET 
     AuditStatus = @AuditStatus,
     AuditLevel = @AuditLevel,
     CurrentAuditor = @AuditBy,

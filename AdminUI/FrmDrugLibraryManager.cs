@@ -14,8 +14,8 @@ namespace AdminUI
         #region ========== 全局统一布局参数 ==========
         private readonly Padding _globalMainContainerPadding = new Padding(15, 15, 15, 15);
         private readonly bool _globalContentAutoCenter = false;
-        private readonly int _globalContentOffsetX = 20;
-        private readonly int _globalContentOffsetY = 20;
+        private readonly int _globalContentOffsetX = 1;
+        private readonly int _globalContentOffsetY = 1;
         private readonly int _globalContentMinWidth = 1300;
         private readonly int _globalContentMinHeight = 700;
         private readonly Padding _globalControlMargin = new Padding(5, 5, 5, 5);
@@ -464,22 +464,46 @@ namespace AdminUI
                 ColumnHeadersHeight = 35
             };
             grp_DrugList.Controls.Add(dgv_DrugList);
-            // 修正：DataPropertyName和查询SQL的字段名完全匹配
+            // 修正：DataPropertyName和数据库字段匹配，显式设置Name属性确保可通过名称查找
             dgv_DrugList.Columns.AddRange(new DataGridViewColumn[] {
-                new DataGridViewTextBoxColumn { HeaderText = "药物唯一编码", DataPropertyName = "DrugCode", Width = 120 },
-                new DataGridViewTextBoxColumn { HeaderText = "通用名", DataPropertyName = "DrugGenericName", Width = 150 },
-                new DataGridViewTextBoxColumn { HeaderText = "商品名", DataPropertyName = "TradeName", Width = 150 },
-                new DataGridViewTextBoxColumn { HeaderText = "药物分类", DataPropertyName = "DrugCategory", Width = 120 },
-                new DataGridViewTextBoxColumn { HeaderText = "规格剂型", DataPropertyName = "Specification", Width = 120 },
-                new DataGridViewTextBoxColumn { HeaderText = "批准文号", DataPropertyName = "ApprovalNumber", Width = 150 },
-                new DataGridViewTextBoxColumn { HeaderText = "生产厂家", DataPropertyName = "Manufacturer", Width = 150 },
-                new DataGridViewTextBoxColumn { HeaderText = "处方类型", DataPropertyName = "PrescriptionType", Width = 100 },
-                new DataGridViewTextBoxColumn { HeaderText = "医保类型", DataPropertyName = "MedicalInsuranceType", Width = 100 },
-                new DataGridViewTextBoxColumn { HeaderText = "启用状态", DataPropertyName = "EnableStatus", Width = 80 },
-                new DataGridViewTextBoxColumn { HeaderText = "创建时间", DataPropertyName = "CreateTime", Width = 120 },
-                new DataGridViewTextBoxColumn { HeaderText = "最后更新人", DataPropertyName = "UpdateUser", Width = 100 },
-                new DataGridViewButtonColumn { HeaderText = "操作", Text = "编辑", UseColumnTextForButtonValue = true, Width = 80 }
+                // 隐藏主键列
+                new DataGridViewTextBoxColumn { Name = "DrugID", HeaderText = "药物ID", DataPropertyName = "DrugID", Visible = false, Width = 50 },
+    
+                // 【核心识别字段（前5列）】
+                new DataGridViewTextBoxColumn { Name = "DrugGenericName", HeaderText = "通用名", DataPropertyName = "DrugGenericName", Width = 140, FillWeight = 15 },
+                new DataGridViewTextBoxColumn { Name = "TradeName", HeaderText = "商品名", DataPropertyName = "TradeName", Width = 120, FillWeight = 12 },
+                new DataGridViewTextBoxColumn { Name = "DrugCategory", HeaderText = "药物分类", DataPropertyName = "DrugCategory", Width = 100, FillWeight = 10 },
+                new DataGridViewTextBoxColumn { Name = "SubCategory", HeaderText = "亚分类", DataPropertyName = "SubCategory", Width = 100, FillWeight = 10 },
+                new DataGridViewTextBoxColumn { Name = "Specification", HeaderText = "规格剂型", DataPropertyName = "Specification", Width = 120, FillWeight = 12 },
+    
+                // 【临床用药核心字段（中间列）】
+                new DataGridViewTextBoxColumn { Name = "AdminRoute", HeaderText = "给药途径", DataPropertyName = "AdminRoute", Width = 80, FillWeight = 8 },
+                new DataGridViewTextBoxColumn { Name = "DailyDosage", HeaderText = "每日剂量", DataPropertyName = "DailyDosage", Width = 100, FillWeight = 10 }, // 合并计算列
+                new DataGridViewTextBoxColumn { Name = "PeakTime_h", HeaderText = "达峰时间(h)", DataPropertyName = "PeakTime_h", Width = 80, FillWeight = 8 },
+                new DataGridViewTextBoxColumn { Name = "ActionDuration_h", HeaderText = "作用时长(h)", DataPropertyName = "ActionDuration_h", Width = 80, FillWeight = 8 },
+                new DataGridViewTextBoxColumn { Name = "HalfLife_h", HeaderText = "半衰期(h)", DataPropertyName = "HalfLife_h", Width = 80, FillWeight = 8 },
+                new DataGridViewTextBoxColumn { Name = "GuideGrade", HeaderText = "指南等级", DataPropertyName = "GuideGrade", Width = 70, FillWeight = 7 },
+                new DataGridViewTextBoxColumn { Name = "IsFirstLine", HeaderText = "是否一线", DataPropertyName = "IsFirstLine", Width = 70, FillWeight = 7 },
+                new DataGridViewTextBoxColumn { Name = "IsDomestic", HeaderText = "是否国产", DataPropertyName = "IsDomestic", Width = 70, FillWeight = 7 },
+    
+                // 【合规与管理字段（后列）】
+                new DataGridViewTextBoxColumn { Name = "PrescriptionType", HeaderText = "处方类型", DataPropertyName = "PrescriptionType", Width = 80, FillWeight = 8 },
+                new DataGridViewTextBoxColumn { Name = "MedicalInsuranceType", HeaderText = "医保类型", DataPropertyName = "MedicalInsuranceType", Width = 80, FillWeight = 8 },
+                new DataGridViewTextBoxColumn { Name = "ApprovalNumber", HeaderText = "批准文号", DataPropertyName = "ApprovalNumber", Width = 140, FillWeight = 14 },
+                new DataGridViewTextBoxColumn { Name = "Manufacturer", HeaderText = "生产厂家", DataPropertyName = "Manufacturer", Width = 160, FillWeight = 16 },
+                new DataGridViewTextBoxColumn { Name = "EnableStatus", HeaderText = "启用状态", DataPropertyName = "EnableStatus", Width = 70, FillWeight = 7 },
+                new DataGridViewTextBoxColumn { Name = "AuditStatus", HeaderText = "审核状态", DataPropertyName = "AuditStatus", Width = 90, FillWeight = 9 },
+    
+                // 【系统字段（最后列）】
+                new DataGridViewTextBoxColumn { Name = "CreateTime", HeaderText = "创建时间", DataPropertyName = "CreateTime", Width = 130, FillWeight = 13, DefaultCellStyle = { Format = "yyyy-MM-dd HH:mm" } },
+                new DataGridViewTextBoxColumn { Name = "UpdateUser", HeaderText = "最后更新人", DataPropertyName = "UpdateUser", Width = 100, FillWeight = 10 },
+    
+                // 操作列
+                new DataGridViewButtonColumn { Name = "Operation", HeaderText = "操作", Text = "编辑", UseColumnTextForButtonValue = true, Width = 80, FillWeight = 8 }
             });
+
+            // 新增：单元格格式化事件绑定（处理特殊字段显示）
+            dgv_DrugList.CellFormatting += Dgv_DrugList_CellFormatting;
         }
 
         private void InitDrugEditPage(ComboBox cbo_PrescriptionType)
@@ -1350,5 +1374,112 @@ namespace AdminUI
         #endregion
         #endregion
 
+        #region 终极修复：药物列表单元格格式化（零空引用异常）
+        /// <summary>
+        /// 药物列表单元格格式化：合并剂量、布尔值转中文、空值处理、状态颜色区分
+        /// 修复点：1. 先判断null再调用ToString() 2. 统一处理null和DBNull.Value 3. 异常捕获兜底
+        /// </summary>
+        private void Dgv_DrugList_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            try
+            {
+                // 基础校验：行索引无效或新行直接返回
+                if (e.RowIndex < 0 || dgv_DrugList.Rows[e.RowIndex].IsNewRow)
+                    return;
+
+                // 获取数据源原始行（DataTable绑定模式下为DataRowView）
+                DataRowView drv = dgv_DrugList.Rows[e.RowIndex].DataBoundItem as DataRowView;
+                if (drv == null || drv.Row == null)
+                    return;
+
+                // 1. 智能合并每日剂量（从数据源直接读取原始字段）
+                if (dgv_DrugList.Columns["DailyDosage"] != null && e.ColumnIndex == dgv_DrugList.Columns["DailyDosage"].Index)
+                {
+                    object minObj = drv["DailyDosageMin"];
+                    object maxObj = drv["DailyDosageMax"];
+                    object unitObj = drv["DosageUnit"];
+
+                    string min = minObj != DBNull.Value ? minObj.ToString().Trim() : "";
+                    string max = maxObj != DBNull.Value ? maxObj.ToString().Trim() : "";
+                    string unit = unitObj != DBNull.Value ? unitObj.ToString().Trim() : "";
+
+                    if (!string.IsNullOrEmpty(min) && !string.IsNullOrEmpty(max))
+                        e.Value = $"{min}-{max} {unit}";
+                    else if (!string.IsNullOrEmpty(min))
+                        e.Value = $"{min} {unit}";
+                    else
+                        e.Value = "-";
+
+                    e.FormattingApplied = true;
+                }
+
+                // 2. 布尔值转中文显示（是否一线）
+                if (dgv_DrugList.Columns["IsFirstLine"] != null && e.ColumnIndex == dgv_DrugList.Columns["IsFirstLine"].Index)
+                {
+                    object value = drv["IsFirstLine"];
+                    e.Value = value != DBNull.Value && Convert.ToBoolean(value) ? "是" : "否";
+                    e.FormattingApplied = true;
+                }
+
+                // 3. 布尔值转中文显示（是否国产）
+                if (dgv_DrugList.Columns["IsDomestic"] != null && e.ColumnIndex == dgv_DrugList.Columns["IsDomestic"].Index)
+                {
+                    object value = drv["IsDomestic"];
+                    e.Value = value != DBNull.Value && Convert.ToBoolean(value) ? "是" : "否";
+                    e.FormattingApplied = true;
+                }
+
+                // 4. 所有空值统一显示为"-"（修复：先判断null再调用ToString()）
+                if (!e.FormattingApplied)
+                {
+                    if (e.Value == null || e.Value == DBNull.Value || string.IsNullOrWhiteSpace(e.Value.ToString()))
+                    {
+                        e.Value = "-";
+                        e.FormattingApplied = true;
+                    }
+                }
+
+                // 5. 状态列颜色区分（修复：统一空值检查）
+                if (dgv_DrugList.Columns["EnableStatus"] != null && e.ColumnIndex == dgv_DrugList.Columns["EnableStatus"].Index)
+                {
+                    if (e.Value != null)
+                    {
+                        string status = e.Value.ToString().Trim();
+                        e.CellStyle.ForeColor = status == "启用"
+                            ? Color.FromArgb(40, 167, 69)  // 绿色
+                            : Color.FromArgb(220, 53, 69); // 红色
+                    }
+                }
+
+                if (dgv_DrugList.Columns["AuditStatus"] != null && e.ColumnIndex == dgv_DrugList.Columns["AuditStatus"].Index)
+                {
+                    if (e.Value != null)
+                    {
+                        string status = e.Value.ToString().Trim();
+                        switch (status)
+                        {
+                            case "终审通过":
+                                e.CellStyle.ForeColor = Color.FromArgb(40, 167, 69); // 绿色
+                                break;
+                            case "审核驳回":
+                                e.CellStyle.ForeColor = Color.FromArgb(220, 53, 69); // 红色
+                                break;
+                            default:
+                                e.CellStyle.ForeColor = Color.FromArgb(255, 193, 7); // 黄色（待审核）
+                                break;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // 异常兜底：格式化失败时显示"-"，不抛出异常
+                e.Value = "-";
+                e.FormattingApplied = true;
+                // 可选：记录日志
+                // MessageBox.Show($"单元格格式化警告：{ex.Message}", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        #endregion
     }
 }

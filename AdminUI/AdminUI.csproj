@@ -140,6 +140,12 @@
     <Compile Include="FrmBackupRestore.Designer.cs">
       <DependentUpon>FrmBackupRestore.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBloodSugarLibraryManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBloodSugarLibraryManager.Designer.cs">
+      <DependentUpon>FrmBloodSugarLibraryManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmChangePwd.cs">
       <SubType>Form</SubType>
     </Compile>

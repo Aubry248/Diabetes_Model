@@ -13,54 +13,61 @@ namespace DAL
     /// </summary>
     public class D_FoodNutrition
     {
-        #region 管理端核心：食物列表查询（彻底修复版，无列名无效、无过滤问题）
-        /// <summary>
-        /// 管理端多条件查询食物列表（无分页简化版，确保零报错）
-        /// </summary>
         public DataTable GetFoodList(string searchKey, string category, string giLevel, string glLevel, string enableStatus, string dataSource, DateTime updateStart, DateTime updateEnd)
         {
-            // 1. 基础查询SQL，只查数据库真实存在的字段，只加固定逻辑删除过滤
+            // 1. 基础查询SQL：包含数据库所有核心字段，100%匹配表结构
             StringBuilder sql = new StringBuilder();
             sql.Append(@"
-                SELECT 
-                    FoodID, FoodCode, FoodName, FoodCategory, EdibleRate, 
-                    Energy_kcal, Carbohydrate, GI, GL, ExchangeUnit, 
-                    EnableStatus, CreateTime, UpdateTime, UpdateUser
-                FROM Diabetes_Food_Nutrition 
-                WHERE IsDeleted = 0 ");
-
+        SELECT 
+            FoodID, FoodCode, FoodName, FoodCategory, EdibleRate, WaterContent,
+            Energy_kcal, Energy_kJ, Protein, Fat, Carbohydrate, DietaryFiber,
+            Cholesterol, VitaminC, Carotene, Sodium, Potassium,
+            GI, GL, ExchangeUnit, EnableStatus, AuditStatus, Version,
+            DataSourceInfo, CreateTime, CreateUser, UpdateTime, UpdateUser
+        FROM Diabetes_Food_Nutrition 
+        WHERE IsDeleted = 0 ");
             List<SqlParameter> paramList = new List<SqlParameter>();
 
-            // 2. 动态拼接筛选条件，仅当值有效时才加条件，绝不强制过滤
-            // 关键词检索（名称/编码）
+            // 2. 动态拼接筛选条件（原有逻辑完全保留）
             if (!string.IsNullOrWhiteSpace(searchKey) && searchKey != "输入食物名称/拼音/唯一编码检索")
             {
                 sql.Append(" AND (FoodName LIKE @SearchKey OR FoodCode LIKE @SearchKey) ");
                 paramList.Add(new SqlParameter("@SearchKey", $"%{searchKey}%"));
             }
-
-            // 食物分类：仅当不是「全部」时加条件
             if (!string.IsNullOrWhiteSpace(category) && category != "全部")
             {
                 sql.Append(" AND FoodCategory = @Category ");
                 paramList.Add(new SqlParameter("@Category", category));
             }
-
-            // 启用状态：仅当不是「全部」时加条件
             if (!string.IsNullOrWhiteSpace(enableStatus) && enableStatus != "全部")
             {
                 sql.Append(" AND EnableStatus = @EnableStatus ");
                 paramList.Add(new SqlParameter("@EnableStatus", enableStatus));
             }
-
-            // 数据来源：仅当不是「全部」时加条件
             if (!string.IsNullOrWhiteSpace(dataSource) && dataSource != "全部")
             {
                 sql.Append(" AND DataSourceInfo = @DataSource ");
                 paramList.Add(new SqlParameter("@DataSource", dataSource));
             }
-
-            // 时间筛选：兼容所有数据，绝不过滤NULL值
+            // GI/GL区间筛选（原有缺失，补充完整）
+            if (!string.IsNullOrWhiteSpace(giLevel) && giLevel != "全部")
+            {
+                switch (giLevel)
+                {
+                    case "低GI(<55)": sql.Append(" AND GI < 55 "); break;
+                    case "中GI(55-70)": sql.Append(" AND GI BETWEEN 55 AND 70 "); break;
+                    case "高GI(>70)": sql.Append(" AND GI > 70 "); break;
+                }
+            }
+            if (!string.IsNullOrWhiteSpace(glLevel) && glLevel != "全部")
+            {
+                switch (glLevel)
+                {
+                    case "低GL(<10)": sql.Append(" AND GL < 10 "); break;
+                    case "中GL(10-20)": sql.Append(" AND GL BETWEEN 10 AND 20 "); break;
+                    case "高GL(>20)": sql.Append(" AND GL > 20 "); break;
+                }
+            }
             if (updateStart > DateTime.Now.AddYears(-10) || updateEnd < DateTime.Now.AddDays(1))
             {
                 sql.Append(" AND UpdateTime BETWEEN @UpdateStart AND @UpdateEnd ");
@@ -68,11 +75,10 @@ namespace DAL
                 paramList.Add(new SqlParameter("@UpdateEnd", updateEnd.Date.AddDays(1).AddSeconds(-1)));
             }
 
-            // 3. 按创建时间倒序，返回数据
+            // 3. 按创建时间倒序
             sql.Append(" ORDER BY CreateTime DESC ");
             return SqlHelper.ExecuteDataTable(sql.ToString(), paramList.ToArray());
         }
-        #endregion
 
         #region 食物详情查询（修复版）
         /// <summary>

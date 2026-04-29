@@ -13,8 +13,8 @@ namespace AdminUI
         #region 全局统一布局参数
         private readonly Padding _globalMainContainerPadding = new Padding(15, 15, 15, 15);
         private readonly bool _globalContentAutoCenter = false;
-        private readonly int _globalContentOffsetX = 20;
-        private readonly int _globalContentOffsetY = 20;
+        private readonly int _globalContentOffsetX = 1;
+        private readonly int _globalContentOffsetY = 1;
         private readonly int _globalContentMinWidth = 1300;
         private readonly int _globalContentMinHeight = 700;
         private readonly Padding _globalControlMargin = new Padding(5, 5, 5, 5);

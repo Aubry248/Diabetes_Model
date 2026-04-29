@@ -45,6 +45,7 @@
     <Compile Include="D_Abnormal.cs" />
     <Compile Include="D_Admin.cs" />
     <Compile Include="D_BloodSugar.cs" />
+    <Compile Include="D_BloodSugarLibrary.cs" />
     <Compile Include="D_DictLibrary.cs" />
     <Compile Include="D_Diet.cs" />
     <Compile Include="D_DietPlan.cs" />

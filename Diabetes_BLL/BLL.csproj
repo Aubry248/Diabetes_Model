@@ -82,6 +82,7 @@
     <Compile Include="B_AuditLog.cs" />
     <Compile Include="B_BackupRestore.cs" />
     <Compile Include="B_BloodSugar.cs" />
+    <Compile Include="B_BloodSugarLibrary.cs" />
     <Compile Include="B_DictLibrary.cs" />
     <Compile Include="B_Diet.cs" />
     <Compile Include="B_DietPlan.cs" />

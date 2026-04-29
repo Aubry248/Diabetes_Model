@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Model
 {
     /// <summary>
-    /// 对应数据库 dbo.t_blood_sugar 表，血糖数据实体
+    /// 血糖数据实体（对应数据库t_blood_sugar表）
     /// </summary>
     public class BloodSugar
     {
@@ -20,6 +16,11 @@ namespace Model
         /// 对应用户ID（患者ID）
         /// </summary>
         public int user_id { get; set; }
+
+        /// <summary>
+        /// 患者姓名（显示用，关联用户表）
+        /// </summary>
+        public string user_name { get; set; }
 
         /// <summary>
         /// 设备ID
@@ -62,12 +63,17 @@ namespace Model
         public int operator_id { get; set; }
 
         /// <summary>
+        /// 操作人姓名（显示用）
+        /// </summary>
+        public string operator_name { get; set; }
+
+        /// <summary>
         /// 异常备注
         /// </summary>
         public string abnormal_note { get; set; }
 
         /// <summary>
-        /// 数据状态
+        /// 数据状态：1=正常 0=已删除
         /// </summary>
         public int data_status { get; set; }
 

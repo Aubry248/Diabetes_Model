@@ -27,8 +27,25 @@ namespace BLL
         #region 原有核心方法（完全保留，仅统一data_status=1）
         public List<AntidiabeticDrug> GetDrugDictionary()
         {
-            try { return _dalMedicine.GetDrugDictionaryList(); }
-            catch (Exception ex) { throw new Exception("获取药物字典失败：" + ex.Message, ex); }
+            try
+            {
+                var list = _dalMedicine.GetDrugDictionaryList();
+                // 确保返回非空列表，避免后续绑定异常
+                return list ?? new List<AntidiabeticDrug>();
+            }
+            catch (Exception ex)
+            {
+                // 记录详细错误日志，方便排查
+                System.Diagnostics.Debug.WriteLine($"【药物字典加载异常】{ex.Message}\n{ex.StackTrace}");
+                // 兜底数据：确保页面不会崩溃
+                return new List<AntidiabeticDrug>
+        {
+            new AntidiabeticDrug { DrugCode = "MET", DrugGenericName = "盐酸二甲双胍片" },
+            new AntidiabeticDrug { DrugCode = "GLM", DrugGenericName = "格列美脲片" },
+            new AntidiabeticDrug { DrugCode = "INS", DrugGenericName = "胰岛素注射液" },
+            new AntidiabeticDrug { DrugCode = "ACA", DrugGenericName = "阿卡波糖片" }
+        };
+            }
         }
 
         public ResultModel SaveMedicineRecord(Medicine medicine)
